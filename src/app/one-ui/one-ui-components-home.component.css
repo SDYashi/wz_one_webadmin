@@ -1,0 +1,61 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 0;
+}
+.sidebar {
+    width: 250px;
+    background-color: #2a3f54;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+    padding-top: 20px;
+}
+.sidebar h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+}
+.sidebar ul li:hover {
+    background-color: #1a2734;
+}
+.sidebar ul li i {
+    margin-right: 10px;
+}
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.header input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.header .icons {
+    display: flex;
+    align-items: center;
+}
+.header .icons i {
+    margin-left: 20px;
+    cursor: pointer;
+}

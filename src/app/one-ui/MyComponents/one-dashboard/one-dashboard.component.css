@@ -1,0 +1,110 @@
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.header input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.header .icons {
+    display: flex;
+    align-items: center;
+}
+.header .icons i {
+    margin-left: 20px;
+    cursor: pointer;
+}
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 23%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card i {
+    font-size: 24px;
+}
+.card .text {
+    margin-left: 10px;
+}
+.card .text h3 {
+    margin: 0;
+    font-size: 18px;
+}
+.card .text p {
+    margin: 0;
+    color: #888;
+}
+.table-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+table th {
+    background-color: #f4f7f9;
+}
+.status {
+    color: red;
+}
+.overview {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.overview .box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 32%;
+}
+.overview .box h4 {
+    margin: 0 0 10px 0;
+}
+.overview .box p {
+    margin: 0;
+    color: #888;
+}
+.todo, .leads {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.todo h4, .leads h4 {
+    margin: 0 0 10px 0;
+}
+.todo p, .leads p {
+    margin: 0;
+    color: #888;
+}
