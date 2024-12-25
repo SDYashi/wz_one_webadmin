@@ -1,28 +1,75 @@
-<div class="sidebar">
-  <h1>DEMO</h1>
-  <ul>
-      <li><i class="fas fa-home"></i> HRM</li>
-      <li><i class="fas fa-tachometer-alt"></i> Dashboard</li>
-      <li><i class="fas fa-users"></i> Customers</li>
-      <li><i class="fas fa-industry"></i> Manufacturing</li>
-      <li><i class="fas fa-file-alt"></i> HR records</li>
-      <li><i class="fas fa-truck"></i> Suppliers</li>
-      <li><i class="fas fa-calculator"></i> Accounting</li>
-      <li><i class="fas fa-chart-line"></i> Sales</li>
-      <li><i class="fas fa-file-invoice"></i> Subscriptions</li>
-      <li><i class="fas fa-money-bill-wave"></i> Expenses</li>
-      <li><i class="fas fa-file-contract"></i> Contracts</li>
-      <li><i class="fas fa-project-diagram"></i> Projects</li>
-      <li><i class="fas fa-file-invoice-dollar"></i> HR payroll</li>
-      <li><i class="fas fa-boxes"></i> Inventory</li>
-      <li><i class="fas fa-percentage"></i> Commission</li>
-      <li><i class="fas fa-shopping-cart"></i> Purchase</li>
-      <li><i class="fas fa-clock"></i> Timesheets & Leave</li>
-      <li><i class="fas fa-comments"></i> WhatsApp</li>
-      <li><i class="fas fa-tasks"></i> Tasks</li>
-      <li><i class="fas fa-file-invoice"></i> Estimate Request</li>
-  </ul>
-</div>
-<div class="container-fluid"> 
-<router-outlet></router-outlet> 
+<div class="d-flex">
+  <!-- Sidebar -->
+  <aside class="sidebar bg-dark text-white vh-100">
+    <div class="container py-3">
+      <div class="text-center mb-3">
+        <h4>OneAdmin</h4>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item bg-dark text-white">
+          One Dashboard
+        </li>
+        <li class="list-group-item bg-dark">
+          <a href="#" class="sidebar-link text-white" data-bs-toggle="collapse" data-bs-target="#User" aria-expanded="false">
+            User Console
+            <i class="fas fa-chevron-down"></i>
+          </a>
+          <ul id="User" class="collapse list-unstyled ps-3">
+            <li class="sidebar-item">
+              <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/dashboard">Power BI Services Refresh Call</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="text-white text-decoration-none" routerLink="/powerbi/Refresh-WZ-Warehouse-Services">WZ BI Services Refresh Call</a>
+            </li>
+          </ul>
+        </li>
+        <li class="list-group-item bg-dark">
+          <a href="#" class="sidebar-link text-white d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#Integration" aria-expanded="false">
+            Integration Console
+            <i class="fas fa-chevron-down"></i>
+          </a>
+          <ul id="Integration" class="collapse list-unstyled ps-3">
+            <li class="sidebar-item">
+              <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/dashboard">Power BI Services Refresh Call</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="text-white text-decoration-none" routerLink="/powerbi/Refresh-WZ-Warehouse-Services">WZ BI Services Refresh Call</a>
+            </li>
+          </ul>
+        </li>
+        <li class="list-group-item bg-dark">
+          <a href="#" class="sidebar-link text-white d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#Database" aria-expanded="false">
+            Database Console
+            <i class="fas fa-chevron-down"></i>
+          </a>
+          <ul id="Database" class="collapse list-unstyled ps-3">
+            <li class="sidebar-item">
+              <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/dashboard">Power BI Services Refresh Call</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="text-white text-decoration-none" routerLink="/powerbi/Refresh-WZ-Warehouse-Services">WZ BI Services Refresh Call</a>
+            </li>
+          </ul>
+        </li>
+        <li class="list-group-item bg-dark">
+          <a href="#" class="sidebar-link text-white d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#Communication" aria-expanded="false">
+            Communication Console
+            <i class="fas fa-chevron-down"></i>
+          </a>
+          <ul id="Communication" class="collapse list-unstyled ps-3">
+            <li class="sidebar-item">
+              <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/dashboard">Power BI Services Refresh Call</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="text-white text-decoration-none" routerLink="/powerbi/Refresh-WZ-Warehouse-Services">WZ BI Services Refresh Call</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <!-- Main Content -->
+  <div class="container-fluid flex-fill p-4">
+    <router-outlet></router-outlet>
+  </div>
 </div>
