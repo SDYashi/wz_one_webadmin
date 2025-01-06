@@ -5,51 +5,6 @@ body {
     margin: 0;
     padding: 0;
 }
-/* Logo Section Styles */
-.sidebar .logo {
-    text-align: center;
-    margin-bottom: 30px;
-    padding: 10px 0;
-    background-color: #1e2937;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-}
-
-.sidebar .logo img {
-    max-width: 100%;
-    height: auto;
-    max-height: 50px; /* Ensures the logo fits neatly */
-    margin-bottom: 10px;
-}
-
-.sidebar .logo h1 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    margin: 0;
-}
-
-/* Responsive Adjustments for Logo */
-@media (max-width: 768px) {
-    .sidebar .logo img {
-        max-height: 40px;
-    }
-
-    .sidebar .logo h1 {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 576px) {
-    .sidebar .logo img {
-        display: none; /* Hide the image logo on very small screens */
-    }
-
-    .sidebar .logo h1 {
-        font-size: 14px;
-        text-align: center;
-    }
-}
-
 
 /* Sidebar Styles */
 .sidebar {
@@ -102,6 +57,23 @@ body {
 .sidebar ul li i {
     margin-left: auto;
     font-size: 16px;
+}
+
+.sidebar ul li ul {
+    margin-left: 15px; /* Indentation for submenu */
+    background-color: #2a3f54;
+    padding-left: 15px;
+    display: none; /* Hidden by default */
+}
+
+
+
+.sidebar ul li ul li {
+    padding: 8px 10px; /* Smaller padding for submenu items */
+}
+
+.sidebar ul li ul li a {
+    font-size: 14px; /* Smaller font size for submenu items */
 }
 
 /* Main Content Styles */
@@ -219,7 +191,7 @@ body {
 /* Hover Effects */
 .sidebar ul li:hover {
     background-color: #1e2937;
-    padding-left: 25px;
+    padding-left: 25px; /* Indentation on hover */
 }
 
 .header .icons i:hover {

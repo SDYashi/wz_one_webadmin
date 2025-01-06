@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OneLoginComponent } from './one-login/one-login.component';
 import { OneUiModule } from './one-ui/one-ui.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { OneUiModule } from './one-ui/one-ui.module';
     BrowserModule,
     AppRoutingModule,
     OneUiModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

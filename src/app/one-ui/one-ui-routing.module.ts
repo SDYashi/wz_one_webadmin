@@ -9,7 +9,10 @@ import { AuthGaurdGuard } from './MyApiServices/auth-gaurd.guard';
 
 const routes: Routes = [
   {
-    path:'oneadmin',component:OneUiComponentsHomeComponent, canActivate: [AuthGaurdGuard],
+    // path:'oneadmin',component:OneUiComponentsHomeComponent,
+    path:'oneadmin',
+    component:OneUiComponentsHomeComponent, 
+    canActivate: [AuthGaurdGuard],
     children: [
       { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
       { path:'dashboard', component:OneDashboardComponent},

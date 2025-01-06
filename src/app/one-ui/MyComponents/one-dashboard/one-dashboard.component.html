@@ -7,25 +7,31 @@
         </div>
     </div>
     <div class="cards">
-        <div class="card">
-            <i class="fas fa-file-invoice"></i>
+        <div class="card">           
             <div class="text">
-                <h3>Invoices Awaiting Payment</h3>
-                <p>2 / 2</p>
+                <h5>Active Users</h5>
+                <p *ngIf="activeUsersCount !== null">{{ activeUsersCount }}</p>
+                <p *ngIf="activeUsersCount === null">Loading...</p>
             </div>
         </div>
         <div class="card">
-            <i class="fas fa-user-check"></i>
             <div class="text">
-                <h3>Converted Leads</h3>
-                <p>0 / 0</p>
+                <h3>Status Wise</h3>
+                <div *ngIf="dashboardstatusCount">
+                    <p>Approved: {{ dashboardstatusCount.APPROVED }}</p>
+                    <p>Pending: {{ dashboardstatusCount.PENDING }}</p>
+                    <p>Reassigned: {{ dashboardstatusCount.REASSIGNED }}</p>
+                    <p>Rejected: {{ dashboardstatusCount.REJECTED }}</p>
+                    <p>Total Count: {{ dashboardtotalCount }}</p>
+                  </div>                  
+                  <p *ngIf="!dashboardstatusCount">Loading...</p>
             </div>
         </div>
         <div class="card">
-            <i class="fas fa-tasks"></i>
             <div class="text">
-                <h3>Projects in Progress</h3>
-                <p>0 / 0</p>
+                <h5>Total Hits Counts</h5>
+                <p *ngIf="total_api_hits !== null">{{ total_api_hits }}</p>
+                <p *ngIf="total_api_hits === null">Loading...</p>
             </div>
         </div>
         <div class="card">
@@ -37,7 +43,7 @@
         </div>
     </div>
     <div class="table-container">
-        <h3>Orders are about to be delivered</h3>
+        <h3>Dashboard recent action history </h3>
         <table>
             <thead>
                 <tr>
@@ -65,13 +71,29 @@
     </div>
     <div class="overview">
         <div class="box">
-            <h4>Invoice overview</h4>
-            <p>0 Draft</p>
-            <p>2 Not Sent</p>
-            <p class="status">2 Unpaid</p>
-            <p>0 Partially Paid</p>
-            <p>0 Overdue</p>
-            <p>0 Paid</p>
+            <h3>Status Wise</h3>
+            <div *ngIf="dashboardstatuswiseData">
+                <table>
+                    <tr>
+                        <td>
+                            <h5>ERP</h5>
+                            <p>APPROVED: {{ dashboardstatuswiseData.erp.APPROVED }}</p>
+                            <p>PENDING: {{ dashboardstatuswiseData.erp.PENDING }}</p>
+                            <p>REASSIGNED: {{ dashboardstatuswiseData.erp.REASSIGNED }}</p>
+                            <p>REJECTED: {{ dashboardstatuswiseData.erp.REJECTED }}</p>
+
+                        </td>
+                        <td>
+                            <h5>NGB</h5>
+                            <p>APPROVED: {{ dashboardstatuswiseData.ngb.APPROVED }}</p>
+                            <p>PENDING: {{ dashboardstatuswiseData.ngb.PENDING }}</p>
+                            <p>REASSIGNED: {{ dashboardstatuswiseData.ngb.REASSIGNED }}</p>
+                            <p>REJECTED: {{ dashboardstatuswiseData.ngb.REJECTED }}</p>
+                        </td>
+                    </tr>
+                </table>
+              </div>
+              <p *ngIf="!dashboardstatuswiseData">Loading...</p>
         </div>
         <div class="box">
             <h4>Estimate overview</h4>

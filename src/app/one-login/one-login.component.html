@@ -1,1 +1,23 @@
-<p>one-login works!</p>
+<div class="login-container">
+    <div class="login-header">
+        Login to OneAdmin
+    </div>
+    <div class="login-form">
+        <form ngform="#loginOneAdmin" (ngSubmit)="userLogin()">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" [(ngModel)]="userinfor.username" name="username" placeholder="username" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" [(ngModel)]="userinfor.password" name="password" placeholder="password" required>
+            </div>
+            <a href="#">Forgot password?</a>
+            <br><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+<div *ngIf="respose_msg">
+    {{respose_msg| json}}
+</div>
