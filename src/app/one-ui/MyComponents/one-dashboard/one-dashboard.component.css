@@ -2,6 +2,11 @@
     margin-left: 250px;
     padding: 20px;
 }
+.dashboard_text_count {
+    font-weight: bold; 
+    font-size: 20px;
+    text-align: center;
+}
 .header {
     display: flex;
     justify-content: space-between;
@@ -28,6 +33,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+
 }
 .card {
     background-color: #fff;
@@ -38,6 +44,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 10px;
 }
 .card i {
     font-size: 24px;
@@ -85,26 +92,12 @@ table th {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 32%;
+    width: 95%;
 }
 .overview .box h4 {
     margin: 0 0 10px 0;
 }
 .overview .box p {
-    margin: 0;
-    color: #888;
-}
-.todo, .leads {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-.todo h4, .leads h4 {
-    margin: 0 0 10px 0;
-}
-.todo p, .leads p {
     margin: 0;
     color: #888;
 }

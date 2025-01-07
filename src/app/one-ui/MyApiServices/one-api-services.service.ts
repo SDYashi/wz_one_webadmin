@@ -35,7 +35,7 @@ export class OneApiServicesService {
     );
   }
   getRecentActionDoneHistory(): Observable<any[]> {
-    return this.http.get<any[]>(this.baseUrl+'/android/dashboard-api-logs-hits-count').pipe(
+    return this.http.get<any[]>(this.baseUrl+'/android/dashboard-recent-actiondone-history').pipe(
       map(response => response));
   }
    

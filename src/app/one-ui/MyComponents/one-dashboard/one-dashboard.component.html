@@ -1,47 +1,63 @@
 <div class="main-content">
-    <div class="header">
-        <input type="text" placeholder="Search...">
+    <div class="header" style="background-color: #f0f0f0;">
+        <input type="text" placeholder="Search..." style="background-color: #fff; color: #333; border: 1px solid #ccc;">
         <div class="icons">
             <i class="fas fa-bell"></i>
             <i class="fas fa-user-circle"></i>
         </div>
     </div>
-    <div class="cards">
+    <div class="cards" *ngIf="dashboardstatusCount">
         <div class="card">           
             <div class="text">
-                <h5>Active Users</h5>
-                <p *ngIf="activeUsersCount !== null">{{ activeUsersCount }}</p>
+                <h6>Total Users</h6>
+                <p class="dashboard_text_count" *ngIf="activeUsersCount !== null">{{ activeUsersCount }}</p>
                 <p *ngIf="activeUsersCount === null">Loading...</p>
             </div>
         </div>
         <div class="card">
             <div class="text">
-                <h3>Status Wise</h3>
-                <div *ngIf="dashboardstatusCount">
-                    <p>Approved: {{ dashboardstatusCount.APPROVED }}</p>
-                    <p>Pending: {{ dashboardstatusCount.PENDING }}</p>
-                    <p>Reassigned: {{ dashboardstatusCount.REASSIGNED }}</p>
-                    <p>Rejected: {{ dashboardstatusCount.REJECTED }}</p>
-                    <p>Total Count: {{ dashboardtotalCount }}</p>
-                  </div>                  
-                  <p *ngIf="!dashboardstatusCount">Loading...</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="text">
-                <h5>Total Hits Counts</h5>
-                <p *ngIf="total_api_hits !== null">{{ total_api_hits }}</p>
+                <h6>Total Hits</h6>
+                <p class="dashboard_text_count" *ngIf="total_api_hits !== null">{{ total_api_hits }}</p>
                 <p *ngIf="total_api_hits === null">Loading...</p>
             </div>
-        </div>
+        </div> 
         <div class="card">
-            <i class="fas fa-tasks"></i>
             <div class="text">
-                <h3>Tasks Not Finished</h3>
-                <p>2 / 2</p>
+                <h6>APPROVED</h6>
+                    <p class="dashboard_text_count" *ngIf="dashboardstatusCount.APPROVED !== null">{{ dashboardstatusCount.APPROVED }}</p> 
+                    <p *ngIf="dashboardstatusCount.APPROVED === null">Loading...</p>
             </div>
         </div>
-    </div>
+        <div class="card">
+            <div class="text">
+                <h6>PENDING</h6>
+                <p class="dashboard_text_count" *ngIf="dashboardstatusCount.PENDING !== null">{{ dashboardstatusCount.PENDING }}</p>
+                <p *ngIf="dashboardstatusCount.PENDING === null">Loading...</p>
+            </div>
+        </div> 
+        <div class="card">
+            <div class="text">
+                <h6>REASSIGNED</h6>
+                <p class="dashboard_text_count" *ngIf="dashboardstatusCount.REASSIGNED !== null">{{ dashboardstatusCount.REASSIGNED }}</p>
+                <p *ngIf="dashboardstatusCount.REASSIGNED === null">Loading...</p>
+            </div>
+        </div> 
+        <div class="card">
+            <div class="text">
+                <h6>REJECTED</h6>
+                <p class="dashboard_text_count" *ngIf="dashboardstatusCount.REJECTED !== null">{{ dashboardstatusCount.REJECTED }}</p>
+                <p *ngIf="dashboardstatusCount.REJECTED === null">Loading...</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="text">
+                <h6>TOTAL</h6>
+                <p class="dashboard_text_count" *ngIf="dashboardtotalCount !== null">{{ dashboardtotalCount }}</p>
+                <p *ngIf="dashboardtotalCount === null">Loading...</p>
+            </div>
+        </div> 
+     </div> 
+
     <div class="table-container">
         <h3>Dashboard recent action history </h3>
         <table>
@@ -71,7 +87,7 @@
     </div>
     <div class="overview">
         <div class="box">
-            <h3>Status Wise</h3>
+            <h6 class="text-center" style="color: gray; background-color: #f0f0f0; padding: 10px; margin-top: -20px;">Dashboard Source Status Wise</h6>
             <div *ngIf="dashboardstatuswiseData">
                 <table>
                     <tr>
@@ -90,28 +106,31 @@
                             <p>REASSIGNED: {{ dashboardstatuswiseData.ngb.REASSIGNED }}</p>
                             <p>REJECTED: {{ dashboardstatuswiseData.ngb.REJECTED }}</p>
                         </td>
+                        <td>
+                            <h5>NGB</h5>
+                            <p>APPROVED: {{ dashboardstatuswiseData.ngb.APPROVED }}</p>
+                            <p>PENDING: {{ dashboardstatuswiseData.ngb.PENDING }}</p>
+                            <p>REASSIGNED: {{ dashboardstatuswiseData.ngb.REASSIGNED }}</p>
+                            <p>REJECTED: {{ dashboardstatuswiseData.ngb.REJECTED }}</p>
+                        </td>
+                        <td>
+                            <h5>NGB</h5>
+                            <p>APPROVED: {{ dashboardstatuswiseData.ngb.APPROVED }}</p>
+                            <p>PENDING: {{ dashboardstatuswiseData.ngb.PENDING }}</p>
+                            <p>REASSIGNED: {{ dashboardstatuswiseData.ngb.REASSIGNED }}</p>
+                            <p>REJECTED: {{ dashboardstatuswiseData.ngb.REJECTED }}</p>
+                        </td>
+                        <td>
+                            <h5>NGB</h5>
+                            <p>APPROVED: {{ dashboardstatuswiseData.ngb.APPROVED }}</p>
+                            <p>PENDING: {{ dashboardstatuswiseData.ngb.PENDING }}</p>
+                            <p>REASSIGNED: {{ dashboardstatuswiseData.ngb.REASSIGNED }}</p>
+                            <p>REJECTED: {{ dashboardstatuswiseData.ngb.REJECTED }}</p>
+                        </td>
                     </tr>
                 </table>
               </div>
               <p *ngIf="!dashboardstatuswiseData">Loading...</p>
-        </div>
-        <div class="box">
-            <h4>Estimate overview</h4>
-            <p>0 Draft</p>
-            <p>0 Not Sent</p>
-            <p>0 Sent</p>
-            <p>0 Expired</p>
-            <p>0 Declined</p>
-            <p>0 Accepted</p>
-        </div>
-        <div class="box">
-            <h4>Proposal overview</h4>
-            <p>0 Draft</p>
-            <p>0 Sent</p>
-            <p>0 Open</p>
-            <p>0 Revised</p>
-            <p>0 Declined</p>
-            <p>0 Accepted</p>
         </div>
     </div>
     <div class="todo">

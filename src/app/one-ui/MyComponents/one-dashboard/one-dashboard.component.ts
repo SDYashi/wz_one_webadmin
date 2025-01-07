@@ -72,11 +72,13 @@ export class OneDashboardComponent {
   }
   loadRecentActionDoneHistory(): void {
     this.oneApiServices.getRecentActionDoneHistory().subscribe(
-      (data) => {
-        this.recentActions = data;
-      },
-      (error) => {
-        console.error('Error fetching recent action done history', error);
+      {
+        next: (response) => {
+          this.recentActions = response;
+        },
+        error: (error) => {
+          this.respose_msg = error.error.msg;
+        }
       }
     );
   }
