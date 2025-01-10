@@ -58,8 +58,7 @@
         </div> 
      </div> 
 
-    <div class="table-container">
-        <h3>Dashboard recent action history </h3>
+    <div class="table-container-fluid">
         <table>
             <thead>
                 <tr>
@@ -85,9 +84,10 @@
             </tbody>
         </table>
     </div>
-    <div class="overview">
+    <br>
+    <div class="container-fluid" style=" padding: 10px; border: 1px solid #ccc;">
         <div class="box">
-            <h6 class="text-center" style="color: gray; background-color: #f0f0f0; padding: 10px; margin-top: -20px;">Dashboard Source Status Wise</h6>
+            <h6 class="text-center" style="color:white; background-color: #6d6ff3; padding: 10px;">Dashboard Source Status Wise</h6>
             <div *ngIf="dashboardstatuswiseData">
                 <table>
                     <tr>
@@ -127,22 +127,24 @@
                             <p>REASSIGNED: {{ dashboardstatuswiseData.ngb.REASSIGNED }}</p>
                             <p>REJECTED: {{ dashboardstatuswiseData.ngb.REJECTED }}</p>
                         </td>
+                        <td>
+                            <h5>NGB</h5>
+                            <p>APPROVED: {{ dashboardstatuswiseData.ngb.APPROVED }}</p>
+                            <p>PENDING: {{ dashboardstatuswiseData.ngb.PENDING }}</p>
+                            <p>REASSIGNED: {{ dashboardstatuswiseData.ngb.REASSIGNED }}</p>
+                            <p>REJECTED: {{ dashboardstatuswiseData.ngb.REJECTED }}</p>
+                        </td>
+                        <td>
+                            <h5>NGB</h5>
+                            <p>APPROVED: {{ dashboardstatuswiseData.ngb.APPROVED }}</p>
+                            <p>PENDING: {{ dashboardstatuswiseData.ngb.PENDING }}</p>
+                            <p>REASSIGNED: {{ dashboardstatuswiseData.ngb.REASSIGNED }}</p>
+                            <p>REJECTED: {{ dashboardstatuswiseData.ngb.REJECTED }}</p>
+                        </td>
                     </tr>
                 </table>
               </div>
               <p *ngIf="!dashboardstatuswiseData">Loading...</p>
         </div>
-    </div>
-    <div class="todo">
-        <h4>My To Do Items</h4>
-        <p>Latest to do's</p>
-        <p>No tasks found</p>
-        <p>Latest finished to do's</p>
-        <p>No finished tasks found</p>
-    </div>
-    <div class="leads">
-        <h4>Leads Overview</h4>
-        <p>Customer</p>
-        <p>Lost Leads</p>
     </div>
   </div>
