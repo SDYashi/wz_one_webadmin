@@ -58,28 +58,28 @@
         </div> 
      </div> 
 
-    <div class="table-container-fluid">
+    <div class="table-container-fluid table-responsive striped">
         <table>
             <thead>
                 <tr>
-                    <th>Purchase order number</th>
-                    <th>Order date</th>
-                    <th>Vendors</th>
-                    <th>PO Value</th>
-                    <th>Tax Value</th>
-                    <th>Delivery date</th>
-                    <th>Delivery status</th>
+                    <th>Action at</th>
+                    <th>Action by</th>
+                    <th>MPWZ ID</th>
+                    <th>Notify Refsys ID</th>
+                    <th>Notify Status</th>
+                    <th>Notify To ID</th>
+                    <th>Sequence No</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>#PO-00001-Jun-2024-1</td>
-                    <td>2024-06-27</td>
-                    <td>SRF</td>
-                    <td>USD2,400.00</td>
-                    <td>USD0.00</td>
-                    <td></td>
-                    <td class="status">Undelivered</td>
+                <tr *ngFor="let recentAction of recentActions; let i = index" [class.table-info]="i % 2 == 0" [class.table-secondary]="i % 2 != 0">
+                    <td>{{ recentAction.action_at | date: 'dd/MM/yyyy HH:mm:ss' }}</td>
+                    <td>{{ recentAction.action_by }}</td>
+                    <td>{{ recentAction.mpwz_id }}</td>
+                    <td>{{ recentAction.notify_refsys_id }}</td>
+                    <td>{{ recentAction.notify_status }}</td>
+                    <td>{{ recentAction.notify_to_id }}</td>
+                    <td>{{ recentAction.sequence_no }}</td>
                 </tr>
             </tbody>
         </table>
@@ -93,53 +93,46 @@
                     <tr>
                         <td>
                             <h5>ERP</h5>
-                            <p>APPROVED: {{ dashboardstatuswiseData.erp.APPROVED }}</p>
-                            <p>PENDING: {{ dashboardstatuswiseData.erp.PENDING }}</p>
-                            <p>REASSIGNED: {{ dashboardstatuswiseData.erp.REASSIGNED }}</p>
-                            <p>REJECTED: {{ dashboardstatuswiseData.erp.REJECTED }}</p>
+                            <p>APPROVED: {{ dashboardstatuswiseData?.erp?.APPROVED ? dashboardstatuswiseData.erp.APPROVED : 0 }}</p>
+                            <p>PENDING: {{ dashboardstatuswiseData?.erp?.PENDING ? dashboardstatuswiseData.erp.PENDING : 0 }}</p>
+                            <p>REASSIGNED: {{ dashboardstatuswiseData?.erp?.REASSIGNED ? dashboardstatuswiseData.erp.REASSIGNED : 0 }}</p>
+                            <p>REJECTED: {{ dashboardstatuswiseData?.erp?.REJECTED ? dashboardstatuswiseData.erp.REJECTED : 0 }}</p>
 
                         </td>
                         <td>
                             <h5>NGB</h5>
-                            <p>APPROVED: {{ dashboardstatuswiseData.ngb.APPROVED }}</p>
-                            <p>PENDING: {{ dashboardstatuswiseData.ngb.PENDING }}</p>
-                            <p>REASSIGNED: {{ dashboardstatuswiseData.ngb.REASSIGNED }}</p>
-                            <p>REJECTED: {{ dashboardstatuswiseData.ngb.REJECTED }}</p>
+                            <p>APPROVED: {{ dashboardstatuswiseData?.ngb?.APPROVED ? dashboardstatuswiseData.ngb.APPROVED : 0 }}</p>
+                            <p>PENDING: {{ dashboardstatuswiseData?.ngb?.PENDING ? dashboardstatuswiseData.ngb.PENDING : 0 }}</p>
+                            <p>REASSIGNED: {{ dashboardstatuswiseData?.ngb?.REASSIGNED ? dashboardstatuswiseData.ngb.REASSIGNED : 0 }}</p>
+                            <p>REJECTED: {{ dashboardstatuswiseData?.ngb?.REJECTED ? dashboardstatuswiseData.ngb.REJECTED : 0 }}</p>
                         </td>
                         <td>
                             <h5>NGB</h5>
-                            <p>APPROVED: {{ dashboardstatuswiseData.ngb.APPROVED }}</p>
-                            <p>PENDING: {{ dashboardstatuswiseData.ngb.PENDING }}</p>
-                            <p>REASSIGNED: {{ dashboardstatuswiseData.ngb.REASSIGNED }}</p>
-                            <p>REJECTED: {{ dashboardstatuswiseData.ngb.REJECTED }}</p>
+                            <p>APPROVED: {{ dashboardstatuswiseData?.ngb?.APPROVED ? dashboardstatuswiseData.ngb.APPROVED : 0 }}</p>
+                            <p>PENDING: {{ dashboardstatuswiseData?.ngb?.PENDING ? dashboardstatuswiseData.ngb.PENDING : 0 }}</p>
+                            <p>REASSIGNED: {{ dashboardstatuswiseData?.ngb?.REASSIGNED ? dashboardstatuswiseData.ngb.REASSIGNED : 0 }}</p>
+                            <p>REJECTED: {{ dashboardstatuswiseData?.ngb?.REJECTED ? dashboardstatuswiseData.ngb.REJECTED : 0 }}</p>
                         </td>
                         <td>
                             <h5>NGB</h5>
-                            <p>APPROVED: {{ dashboardstatuswiseData.ngb.APPROVED }}</p>
-                            <p>PENDING: {{ dashboardstatuswiseData.ngb.PENDING }}</p>
-                            <p>REASSIGNED: {{ dashboardstatuswiseData.ngb.REASSIGNED }}</p>
-                            <p>REJECTED: {{ dashboardstatuswiseData.ngb.REJECTED }}</p>
+                            <p>APPROVED: {{ dashboardstatuswiseData?.ngb?.APPROVED ? dashboardstatuswiseData.ngb.APPROVED : 0 }}</p>
+                            <p>PENDING: {{ dashboardstatuswiseData?.ngb?.PENDING ? dashboardstatuswiseData.ngb.PENDING : 0 }}</p>
+                            <p>REASSIGNED: {{ dashboardstatuswiseData?.ngb?.REASSIGNED ? dashboardstatuswiseData.ngb.REASSIGNED : 0 }}</p>
+                            <p>REJECTED: {{ dashboardstatuswiseData?.ngb?.REJECTED ? dashboardstatuswiseData.ngb.REJECTED : 0 }}</p>
                         </td>
                         <td>
                             <h5>NGB</h5>
-                            <p>APPROVED: {{ dashboardstatuswiseData.ngb.APPROVED }}</p>
-                            <p>PENDING: {{ dashboardstatuswiseData.ngb.PENDING }}</p>
-                            <p>REASSIGNED: {{ dashboardstatuswiseData.ngb.REASSIGNED }}</p>
-                            <p>REJECTED: {{ dashboardstatuswiseData.ngb.REJECTED }}</p>
+                            <p>APPROVED: {{ dashboardstatuswiseData?.ngb?.APPROVED ? dashboardstatuswiseData.ngb.APPROVED : 0 }}</p>
+                            <p>PENDING: {{ dashboardstatuswiseData?.ngb?.PENDING ? dashboardstatuswiseData.ngb.PENDING : 0 }}</p>
+                            <p>REASSIGNED: {{ dashboardstatuswiseData?.ngb?.REASSIGNED ? dashboardstatuswiseData.ngb.REASSIGNED : 0 }}</p>
+                            <p>REJECTED: {{ dashboardstatuswiseData?.ngb?.REJECTED ? dashboardstatuswiseData.ngb.REJECTED : 0 }}</p>
                         </td>
                         <td>
                             <h5>NGB</h5>
-                            <p>APPROVED: {{ dashboardstatuswiseData.ngb.APPROVED }}</p>
-                            <p>PENDING: {{ dashboardstatuswiseData.ngb.PENDING }}</p>
-                            <p>REASSIGNED: {{ dashboardstatuswiseData.ngb.REASSIGNED }}</p>
-                            <p>REJECTED: {{ dashboardstatuswiseData.ngb.REJECTED }}</p>
-                        </td>
-                        <td>
-                            <h5>NGB</h5>
-                            <p>APPROVED: {{ dashboardstatuswiseData.ngb.APPROVED }}</p>
-                            <p>PENDING: {{ dashboardstatuswiseData.ngb.PENDING }}</p>
-                            <p>REASSIGNED: {{ dashboardstatuswiseData.ngb.REASSIGNED }}</p>
-                            <p>REJECTED: {{ dashboardstatuswiseData.ngb.REJECTED }}</p>
+                            <p>APPROVED: {{ dashboardstatuswiseData?.ngb?.APPROVED ? dashboardstatuswiseData.ngb.APPROVED : 0 }}</p>
+                            <p>PENDING: {{ dashboardstatuswiseData?.ngb?.PENDING ? dashboardstatuswiseData.ngb.PENDING : 0 }}</p>
+                            <p>REASSIGNED: {{ dashboardstatuswiseData?.ngb?.REASSIGNED ? dashboardstatuswiseData.ngb.REASSIGNED : 0 }}</p>
+                            <p>REJECTED: {{ dashboardstatuswiseData?.ngb?.REJECTED ? dashboardstatuswiseData.ngb.REJECTED : 0 }}</p>
                         </td>
                     </tr>
                 </table>

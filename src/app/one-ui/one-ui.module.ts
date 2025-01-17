@@ -19,7 +19,6 @@ import { MessageChatsComponent } from './MyComponents/message-chats/message-chat
 import { MessageMessageComponent } from './MyComponents/message-message/message-message.component';
 import { MessageUserInputComponent } from './MyComponents/message-user-input/message-user-input.component';
 import { UserExistingUsersListComponent } from './MyComponents/user-existing-users-list/user-existing-users-list.component';
-import { UserFeedbackFormComponent } from './MyComponents/user-feedback-form/user-feedback-form.component';
 import { UserComplaintsFormComponent } from './MyComponents/user-complaints-form/user-complaints-form.component';
 import { UserComplaintsViewComponent } from './MyComponents/user-complaints-view/user-complaints-view.component';
 import { UserComplaintsDashboardComponent } from './MyComponents/user-complaints-dashboard/user-complaints-dashboard.component';
@@ -50,7 +49,6 @@ import { UserInputModelsComponent } from './MySharedModels/user-input-models/use
     MessageMessageComponent,
     MessageUserInputComponent,
     UserExistingUsersListComponent,
-    UserFeedbackFormComponent,
     UserComplaintsFormComponent,
     UserComplaintsViewComponent,
     UserComplaintsDashboardComponent,

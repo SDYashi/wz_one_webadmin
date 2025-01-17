@@ -1,14 +1,52 @@
+<button
+  id="sidebarToggle"
+  class="btn btn-dark"
+  type="button"
+  data-bs-toggle="collapse"
+  data-bs-target="#accordionSidebar"
+  aria-controls="accordionSidebar"
+  aria-expanded="false"
+  aria-label="Toggle navigation">
+  <i class="fas fa-bars"></i>
+</button>
 <div class="d-flex">
   <!-- Sidebar -->
-  <aside class="sidebar bg-dark text-white vh-100">
+  <aside class="sidebar bg-dark text-white vh-100 d-none d-md-block">
     <div class="container py-3">
       <div class="text-center mb-3">
         <h4>OneAdmin</h4>
       </div>
       <ul class="list-group list-group-flush" id="accordionSidebar">
         <li class="list-group-item bg-dark text-white">
-          One Dashboard
+          <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/dashboard">One Dashboard</a>  
         </li>
+        <li class="list-group-item bg-dark text-white">
+          <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/message-chatbot">
+            ChatBot Console
+          </a>  
+        </li>  
+        <li class="list-group-item bg-dark text-white">
+          <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/batch-control-management">
+            DB Batch Console
+          </a>  
+        </li>  
+        <li class="list-group-item bg-dark" data-bs-toggle="collapse" data-bs-target="#Complaints" aria-expanded="false" aria-controls="User">
+          <a class="sidebar-link text-white d-flex justify-content-between align-items-center">
+            Complaints Console
+            <i class="fas fa-chevron-down"></i>
+          </a>
+        </li>
+        <div id="Complaints" class="collapse list-group list-group-flush ps-3" data-bs-parent="#accordionSidebar">
+          <li class="list-group-item bg-dark">
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-complaints-dashboard">Complaints Dashboard</a>
+          </li>
+          <li class="list-group-item bg-dark">
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-complaints-form-entry">Complaints Form</a>
+          </li>
+          <li class="list-group-item bg-dark">
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-complaints-view">Complaints View</a>
+          </li>
+        </div>
         <li class="list-group-item bg-dark" data-bs-toggle="collapse" data-bs-target="#User" aria-expanded="false" aria-controls="User">
           <a class="sidebar-link text-white d-flex justify-content-between align-items-center">
             User Console
@@ -17,10 +55,16 @@
         </li>
         <div id="User" class="collapse list-group list-group-flush ps-3" data-bs-parent="#accordionSidebar">
           <li class="list-group-item bg-dark">
-            <a href="#" class="text-white text-decoration-none">Power BI Services Refresh Call</a>
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-create-integration-users">Create Integration Users</a>
           </li>
           <li class="list-group-item bg-dark">
-            <a href="#" class="text-white text-decoration-none">WZ BI Services Refresh Call</a>
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-change-password">Change Password</a>
+          </li>
+          <li class="list-group-item bg-dark">
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-change-work-location">Change Work Location</a>
+          </li>
+          <li class="list-group-item bg-dark">
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-add-users-for-alerts">Add Users for Alerts</a>
           </li>
         </div>
         <li class="list-group-item bg-dark" data-bs-toggle="collapse" data-bs-target="#Integration" aria-expanded="false" aria-controls="Integration">
@@ -31,45 +75,20 @@
         </li>
         <div id="Integration" class="collapse list-group list-group-flush ps-3" data-bs-parent="#accordionSidebar">
           <li class="list-group-item bg-dark">
-            <a href="#" class="text-white text-decoration-none">Power BI Services Refresh Call</a>
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/integrated-add-new-app">Add New App</a>
           </li>
           <li class="list-group-item bg-dark">
-            <a href="#" class="text-white text-decoration-none">WZ BI Services Refresh Call</a>
-          </li>
-        </div>
-        <li class="list-group-item bg-dark" data-bs-toggle="collapse" data-bs-target="#Database" aria-expanded="false" aria-controls="Database">
-          <a class="sidebar-link text-white d-flex justify-content-between align-items-center">
-            Database Console
-            <i class="fas fa-chevron-down"></i>
-          </a>
-        </li>
-        <div id="Database" class="collapse list-group list-group-flush ps-3" data-bs-parent="#accordionSidebar">
-          <li class="list-group-item bg-dark">
-            <a href="#" class="text-white text-decoration-none">Power BI Services Refresh Call</a>
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/integrated-add-new-notify-status">Add New App Status</a>
           </li>
           <li class="list-group-item bg-dark">
-            <a href="#" class="text-white text-decoration-none">WZ BI Services Refresh Call</a>
-          </li>
-        </div>
-        <li class="list-group-item bg-dark" data-bs-toggle="collapse" data-bs-target="#Communication" aria-expanded="false" aria-controls="Communication">
-          <a class="sidebar-link text-white d-flex justify-content-between align-items-center">
-            Communication Console
-            <i class="fas fa-chevron-down"></i>
-          </a>
-        </li>
-        <div id="Communication" class="collapse list-group list-group-flush ps-3" data-bs-parent="#accordionSidebar">
-          <li class="list-group-item bg-dark">
-            <a href="#" class="text-white text-decoration-none">Power BI Services Refresh Call</a>
-          </li>
-          <li class="list-group-item bg-dark">
-            <a href="#" class="text-white text-decoration-none">WZ BI Services Refresh Call</a>
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/integrated-add-new-app-buttons">Add New App buttons</a>
           </li>
         </div>
       </ul>
     </div>
   </aside>
   <!-- Main Content -->
-  <div class="container-fluid flex-fill p-4">
+  <div class="container-fluid flex-fill p-4 main-content">
     <router-outlet></router-outlet>
   </div>
 </div>
