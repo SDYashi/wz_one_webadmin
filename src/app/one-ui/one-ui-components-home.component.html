@@ -14,7 +14,7 @@
   <aside class="sidebar bg-dark text-white vh-100 d-none d-md-block">
     <div class="container py-3">
       <div class="text-center mb-3">
-        <h4>OneAdmin</h4>
+       <img src="../../assets/logo/logo_admin.png" alt="Login Image" class="img-fluid mb-3">
       </div>
       <ul class="list-group list-group-flush" id="accordionSidebar">
         <li class="list-group-item bg-dark text-white">
@@ -30,23 +30,6 @@
             DB Batch Console
           </a>  
         </li>  
-        <li class="list-group-item bg-dark" data-bs-toggle="collapse" data-bs-target="#Complaints" aria-expanded="false" aria-controls="User">
-          <a class="sidebar-link text-white d-flex justify-content-between align-items-center">
-            Complaints Console
-            <i class="fas fa-chevron-down"></i>
-          </a>
-        </li>
-        <div id="Complaints" class="collapse list-group list-group-flush ps-3" data-bs-parent="#accordionSidebar">
-          <li class="list-group-item bg-dark">
-            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-complaints-dashboard">Complaints Dashboard</a>
-          </li>
-          <li class="list-group-item bg-dark">
-            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-complaints-form-entry">Complaints Form</a>
-          </li>
-          <li class="list-group-item bg-dark">
-            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-complaints-view">Complaints View</a>
-          </li>
-        </div>
         <li class="list-group-item bg-dark" data-bs-toggle="collapse" data-bs-target="#User" aria-expanded="false" aria-controls="User">
           <a class="sidebar-link text-white d-flex justify-content-between align-items-center">
             User Console
@@ -65,6 +48,9 @@
           </li>
           <li class="list-group-item bg-dark">
             <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-add-users-for-alerts">Add Users for Alerts</a>
+          </li>
+          <li class="list-group-item bg-dark">
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-view-list-users">List of Existing Users</a>
           </li>
         </div>
         <li class="list-group-item bg-dark" data-bs-toggle="collapse" data-bs-target="#Integration" aria-expanded="false" aria-controls="Integration">
@@ -86,9 +72,22 @@
         </div>
       </ul>
     </div>
-  </aside>
+  </aside>  
+
   <!-- Main Content -->
   <div class="container-fluid flex-fill p-4 main-content">
+    <div class="header" style="background-color: #888484;">
+      <input type="text" placeholder="Search..." style="background-color: #fff; color: #333; border: 1px solid #ccc;">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fas fa-user-circle"></i>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" [routerLink]="['/oneadmin/user-view-profile']">My Profile</a></li>
+          <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+        </ul>
+      </div>
+  </div>
     <router-outlet></router-outlet>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OneApiServicesService } from '../../MyApiServices/one-api-services.service';
 
 @Component({
   selector: 'app-integration-batch-fetch-usersfrom-powerbi',
@@ -7,4 +8,26 @@ import { Component } from '@angular/core';
 })
 export class IntegrationBatchFetchUsersfromPowerbiComponent {
 
+
+  // response_status: any = null; 
+  isProcessing = false;
+  result: any;
+  constructor(private oneapiservices: OneApiServicesService) {}
+  ngOnInit(): void {
+    this.insert_userfrom_powerbi_oneapp();
+  }
+
+  insert_userfrom_powerbi_oneapp() {    
+    this.isProcessing = true;
+    this.oneapiservices.insertUserfrom_powerbiwarehouse().subscribe({
+      next: (response) => {
+        this.result = response;
+        this.isProcessing = false;
+      },
+      error: (error) => {
+        this.result = error;
+        this.isProcessing = false;
+      },
+    });
+}
 }

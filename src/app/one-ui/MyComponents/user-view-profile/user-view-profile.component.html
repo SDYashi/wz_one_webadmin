@@ -1,1 +1,161 @@
-<p>user-view-profile works!</p>
+<div class="container">
+    <div class="section-title">Personal Details</div>
+    <div class="form-group">
+        <div class="mb-3">
+            <label for="full-name" class="form-label">Full Name</label>
+            <input type="text" id="full-name" class="form-control" [(ngModel)]="user.employee_name" placeholder="Enter your name" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="dob" class="form-label">Date of Birth</label>
+            <input type="text" id="dob" class="form-control" [(ngModel)]="user.date_of_birth" placeholder="Enter birth date" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-control" [(ngModel)]="user.email_address" placeholder="Enter your email" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="mobile-number" class="form-label">Mobile Number</label>
+            <input type="text" id="mobile-number" class="form-control" [(ngModel)]="user.phone_no" placeholder="Enter mobile number" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="gender" class="form-label">Gender</label>
+            <input type="text" id="gender" class="form-control" [(ngModel)]="user.gender" placeholder="Enter your gender" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="occupation" class="form-label">Occupation</label>
+            <input type="text" id="occupation" class="form-control" [(ngModel)]="user.designation" placeholder="Enter occupation" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="marital-status" class="form-label">Marital Status</label>
+            <input type="text" id="marital-status" class="form-control" [(ngModel)]="user.marital_status" placeholder="Enter marital status" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="nationality" class="form-label">Nationality</label>
+            <input type="text" id="nationality" class="form-control" [(ngModel)]="user.nationality" placeholder="Enter nationality" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" id="address" class="form-control" [(ngModel)]="user.address" placeholder="Enter address" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="aadhar-number" class="form-label">Aadhar Number</label>
+            <input type="text" id="aadhar-number" class="form-control" [(ngModel)]="user.aadhar_number" placeholder="Enter Aadhar number" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="pan-number" class="form-label">PAN Number</label>
+            <input type="text" id="pan-number" class="form-control" [(ngModel)]="user.pan_number" placeholder="Enter PAN number" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="gpf-pran" class="form-label">GPF/PRAN</label>
+            <input type="text" id="gpf-pran" class="form-control" [(ngModel)]="user.gpf_pran" placeholder="Enter GPF/PRAN" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="employee-number" class="form-label">Employee Number</label>
+            <input type="text" id="employee-number" class="form-control" [(ngModel)]="user.employee_number" placeholder="Enter employee number" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="assignment-id" class="form-label">Assignment ID</label>
+            <input type="text" id="assignment-id" class="form-control" [(ngModel)]="user.assignment_id" placeholder="Enter assignment ID" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="work-location" class ="form-label">Work Location</label>
+            <input type="text" id="work-location" class="form-control" [(ngModel)]="user.work_location" placeholder="Enter work location" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="office" class="form-label">Office</label>
+            <input type="text" id="office" class="form-control" [(ngModel)]="user.office" placeholder="Enter office" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="oic-name" class="form-label">OIC Name</label>
+            <input type="text" id="oic-name" class="form-control" [(ngModel)]="user.oic_name" placeholder="Enter OIC name" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="oic-no" class="form-label">OIC No</label>
+            <input type="text" id="oic-no" class="form-control" [(ngModel)]="user.oic_no" placeholder="Enter OIC number" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="original-date-of-hire" class="form-label">Original Date of Hire</label>
+            <input type="text" id="original-date-of-hire" class="form-control" [(ngModel)]="user.original_date_of_hire" placeholder="Enter original date of hire" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="assignment-start-date" class="form-label">Assignment Start Date</label>
+            <input type="text" id="assignment-start-date" class="form-control" [(ngModel)]="user.assignment_start_date" placeholder="Enter assignment start date" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="assignment-start-at-location" class="form-label">Assignment Start At Location</label>
+            <input type="text" id="assignment-start-at-location" class="form-control" [(ngModel)]="user.assignment_start_at_location" placeholder="Enter assignment start at location" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="payroll-name" class="form-label">Payroll Name</label>
+            <input type="text" id="payroll-name" class="form-control" [(ngModel)]="user.payroll_name" placeholder="Enter payroll name" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="pay-in-payband" class="form-label">Pay in Payband</label>
+            <input type="text" id="pay-in-payband" class="form-control" [(ngModel)]="user.pay_in_payband" placeholder="Enter pay in payband" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="pay-basis" class="form-label">Pay Basis</label>
+            <input type="text" id="pay-basis" class="form-control" [(ngModel)]="user.pay_basis" placeholder="Enter pay basis" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="employee-class" class="form-label">Employee Class</label>
+            <input type="text" id="employee-class" class="form-control" [(ngModel)]="user.employee_class" placeholder="Enter employee class" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="class-as-perjob" class="form-label">Class as per Job</label>
+            <input type="text" id="class-as-perjob" class="form-control" [(ngModel)]="user.class_as_perjob" placeholder="Enter class as per job" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="blood-type" class="form-label">Blood Type</label>
+            <input type="text" id="blood-type" class="form-control" [(ngModel)]="user.blood_type" placeholder="Enter blood type" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="height" class="form-label">Height</label>
+            <input type="text" id="height" class="form-control" [(ngModel)]="user.height" placeholder="Enter height" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="town-of-birth" class="form-label">Town of Birth</label>
+            <input type="text" id="town-of-birth" class="form-control" [(ngModel)]="user.town_of_birth" placeholder="Enter town of birth" readonly>
+        </div>
+        <div class=" mb-3">
+            <label for="town" class="form-label">Town</label>
+            <input type="text" id="town" class="form-control" [(ngModel)]="user.town" placeholder="Enter town" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="state" class="form-label">State</label>
+            <input type="text" id="state" class="form-control" [(ngModel)]="user.state" placeholder="Enter state" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="res-catg" class="form-label">Residential Category</label>
+            <input type="text" id="res-catg" class="form-control" [(ngModel)]="user.res_catg" placeholder="Enter residential category" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="tech-nontech" class="form-label">Technical/Non-Technical</label>
+            <input type="text" id="tech-nontech" class="form-control" [(ngModel)]="user.tech_nontech" placeholder="Enter technical/non-technical" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="registered-disabled-flag" class="form-label">Registered Disabled Flag</label>
+            <input type="text" id="registered-disabled-flag" class="form-control" [(ngModel)]="user.registered_disabled_flag" placeholder="Enter registered disabled flag" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="class" class="form-label">Class</label>
+            <input type="text" id="class" class="form-control" [(ngModel)]="user.class" placeholder="Enter class" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="r-year" class="form-label">R Year</label>
+            <input type="text" id="r-year" class="form-control" [(ngModel)]="user.r_year" placeholder="Enter R year" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="mpwz-id" class="form-label">MPWZ ID</label>
+            <input type="text" id="mpwz-id" class="form-control" [(ngModel)]="user.mpwz_id" placeholder="Enter MPWZ ID" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="opt-filled" class="form-label">OPT Filled</label>
+            <input type="text" id="opt-filled" class="form-control" [(ngModel)]="user.opt_filled" placeholder="Enter OPT filled status" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="soft-kff" class="form-label">Soft KFF</label>
+            <input type="text" id="soft-kff" class="form-control" [(ngModel)]="user.soft_kff" placeholder="Enter soft KFF" readonly>
+        </div>
+    </div>
+</div>
