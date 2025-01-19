@@ -22,17 +22,18 @@ export class UserExistingUsersListComponent implements OnInit {
   }
 
   loadUser (): void {
+    this.isProcessing = true; // Set processing to true before loading
     this.oneapisevices.viewalluserprofile_db(this.page_no, this.page_size).subscribe({
       next: (response) => {
         this.users = response.users;
         this.total_counts = response.total_count; 
         this.total_pages = Math.ceil(this.total_counts / this.page_size); 
         this.result = response.msg;
-        this.isProcessing = true;
+        this.isProcessing = false; // Set processing to false after loading
       },
       error: (errors) => {
         this.result = errors.error.msg;
-        this.isProcessing = false;
+        this.isProcessing = false; // Set processing to false on error
       }
     });
   }

@@ -77,5 +77,9 @@ export class OneApiServicesService {
     return this.http.put(this.baseUrl+'/admin/update-work-location-foremployee', data);
   }
 
+  createUserinfor_foremail (user: any): Observable<any> {
+    return this.http.post<any>(this.baseUrl+'/admin/add-admin-details', user);
+  }
+
 
 }
