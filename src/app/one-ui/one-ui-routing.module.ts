@@ -13,7 +13,6 @@ import { IntegratedAddNewNotifyStatusComponent } from './MyComponents/integrated
 import { IntegratedAddNewButtonsComponent } from './MyComponents/integrated-add-new-buttons/integrated-add-new-buttons.component';
 import { IntegrationBatchCreateAndroidUsersComponent } from './MyComponents/integration-batch-create-android-users/integration-batch-create-android-users.component';
 import { IntegrationBatchFetchUsersfromPowerbiComponent } from './MyComponents/integration-batch-fetch-usersfrom-powerbi/integration-batch-fetch-usersfrom-powerbi.component';
-import { UserUpdateSecretKeyforAppComponent } from './MyComponents/user-update-secret-keyfor-app/user-update-secret-keyfor-app.component';
 import { MessageChatsComponent } from './MyComponents/message-chats/message-chats.component';
 import { IntegrationBatchDashboardComponent } from './MyComponents/integration-batch-dashboard/integration-batch-dashboard.component';
 import { UserExistingUsersListComponent } from './MyComponents/user-existing-users-list/user-existing-users-list.component';
@@ -38,7 +37,6 @@ const routes: Routes = [
       { path:'db-batch-console-create-user', component:IntegrationBatchCreateAndroidUsersComponent},
       { path:'batch-control-management',component:IntegrationBatchDashboardComponent},
       { path:'db-batch-console-fetch-users-frompowerbi', component:IntegrationBatchFetchUsersfromPowerbiComponent},
-      { path:'db-batch-console-create-secretkey', component:UserUpdateSecretKeyforAppComponent},
       { path:'message-chatbot', component:MessageChatsComponent},
       { path:'message-input', component:MessageChatsComponent},
       { path:'message-msg-list', component:MessageChatsComponent},

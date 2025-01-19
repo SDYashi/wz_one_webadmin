@@ -12,7 +12,6 @@ import { IntegratedAddNewNotifyStatusComponent } from './MyComponents/integrated
 import { IntegrationBatchCreateAndroidUsersComponent } from './MyComponents/integration-batch-create-android-users/integration-batch-create-android-users.component';
 import { IntegrationBatchFetchUsersfromPowerbiComponent } from './MyComponents/integration-batch-fetch-usersfrom-powerbi/integration-batch-fetch-usersfrom-powerbi.component';
 import { UserUpdateWorkLocationComponent } from './MyComponents/user-update-work-location/user-update-work-location.component';
-import { UserUpdateSecretKeyforAppComponent } from './MyComponents/user-update-secret-keyfor-app/user-update-secret-keyfor-app.component';
 import { MessageChatsComponent } from './MyComponents/message-chats/message-chats.component';
 import { MessageMessageComponent } from './MyComponents/message-message/message-message.component';
 import { MessageUserInputComponent } from './MyComponents/message-user-input/message-user-input.component';
@@ -42,7 +41,6 @@ import { ConfirmationModlesComponent } from './MyComponents/MyPopupModels/confir
     IntegrationBatchCreateAndroidUsersComponent,
     IntegrationBatchFetchUsersfromPowerbiComponent,
     UserUpdateWorkLocationComponent,
-    UserUpdateSecretKeyforAppComponent,
     MessageChatsComponent,
     MessageMessageComponent,
     MessageUserInputComponent,
