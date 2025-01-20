@@ -25,7 +25,7 @@ export class OneApiServicesService {
     );
   }
   getStatusWiseNotifyCount(): Observable<any> {
-    return this.http.get<any>(this.baseUrl+'/android/dashboard-statuswise-notify-count').pipe(
+    return this.http.get<any>(this.baseUrl+'/android/admin-dashboard-statuswise-notify-count').pipe(
       map(response => response) 
     );
   }
