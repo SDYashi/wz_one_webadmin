@@ -22,8 +22,8 @@ export class IntegratedAddNewAppComponent {
       next: (response) => {
         this.response_status = response.msg; 
       },
-      error: (error) => {
-        this.response_status = error; 
+      error: (errors) => {
+        this.response_status = errors.error.msg;
       },
     });
   }

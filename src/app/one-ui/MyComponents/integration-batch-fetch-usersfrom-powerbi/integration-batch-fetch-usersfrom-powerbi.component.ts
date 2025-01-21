@@ -21,11 +21,11 @@ export class IntegrationBatchFetchUsersfromPowerbiComponent {
     this.isProcessing = true;
     this.oneapiservices.insertUserfrom_powerbiwarehouse().subscribe({
       next: (response) => {
-        this.result = response;
+        this.result = response.msg;
         this.isProcessing = false;
       },
-      error: (error) => {
-        this.result = error;
+      error: (errors) => {
+        this.result = errors.error.msg;
         this.isProcessing = false;
       },
     });

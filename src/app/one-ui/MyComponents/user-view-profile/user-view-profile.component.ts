@@ -21,11 +21,11 @@ export class UserViewProfileComponent {
   loadUser(): void {
   this.oneapisevices.viewuserprofile_db().subscribe({
     next: (response) => {
-      this.user = response;
+      this.user = response.msg;
     },
     error:(errors)=>{
       
-      this.user = errors;
+      this.user = errors.error.msg
 
     }
   });
