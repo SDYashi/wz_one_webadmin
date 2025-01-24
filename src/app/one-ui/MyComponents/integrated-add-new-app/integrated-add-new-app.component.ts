@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { OneApiServicesService } from '../../MyApiServices/one-api-services.service';
 
 @Component({
   selector: 'app-integrated-add-new-app',
@@ -22,8 +21,8 @@ export class IntegratedAddNewAppComponent {
       next: (response) => {
         this.response_status = response.msg; 
       },
-      error: (errors) => {
-        this.response_status = errors.error.msg;
+      error: (error) => {
+        this.response_status = error; 
       },
     });
   }

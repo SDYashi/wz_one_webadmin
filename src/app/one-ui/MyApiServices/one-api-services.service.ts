@@ -12,7 +12,7 @@ export class OneApiServicesService {
   constructor(private http:HttpClient){}
   
   userLogin(data: { username: string; password: string }): Observable<any> {
-    return this.http.post(this.baseUrl + '/android/login-admin', data);
+    return this.http.post(this.baseUrl + '/android/login', data);
   }
   getActiveUsersCount(): Observable<number> {
     return this.http.get<{ total_users: number }>(this.baseUrl+'/android/dashboard-active-users-count').pipe(
@@ -37,35 +37,9 @@ export class OneApiServicesService {
   getRecentActionDoneHistory(): Observable<any[]> {
     return this.http.get<any[]>(this.baseUrl+'/android/dashboard-recent-actiondone-history').pipe(
       map(response => response));
-  }  
-
-  submitNotificationStatus(data: any): Observable<any> {
-    return this.http.post(this.baseUrl+'/admin/notify-status', data);
-  }   
-
-  submitAppButtonName(data: any): Observable<any> {
-    return this.http.post(this.baseUrl+'/admin/add-button-status', data);
   }
-
-  submitAddAppName(data: any): Observable<any> {
-    return this.http.post(this.baseUrl+'/admin/notify-integrated-app', data);
-  }   
-  insertUserfrom_mmpwzuser(): Observable<any> {
-    return this.http.post(this.baseUrl+'/admin/insert-userlogininfo-from-mpwzusers',{});
-  }
+   
   
-  insertUserfrom_powerbiwarehouse(): Observable<any> {
-    return this.http.post(this.baseUrl+'/admin/insert-userinfo-from-powerbi-warehouse',{});
-  }
-  
-  viewuserprofile_db(): Observable<any> {
-    return this.http.get(this.baseUrl+'/android/userprofile',{});
-  }
-
-  CreateintegrationAPIUser (userData: any): Observable<any> {
-    return this.http.post(this.baseUrl+'/admin/shared-call/api/v1/create-integration-users',userData); 
-  }
-
 
 
   createUserinfor_foremail (user: any): Observable<any> {

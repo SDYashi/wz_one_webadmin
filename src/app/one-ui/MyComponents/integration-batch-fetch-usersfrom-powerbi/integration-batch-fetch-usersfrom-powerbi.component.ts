@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { OneApiServicesService } from '../../MyApiServices/one-api-services.service';
 
 @Component({
   selector: 'app-integration-batch-fetch-usersfrom-powerbi',
@@ -8,6 +7,7 @@ import { OneApiServicesService } from '../../MyApiServices/one-api-services.serv
 })
 export class IntegrationBatchFetchUsersfromPowerbiComponent {
 
+<<<<<<< HEAD
 
   // response_status: any = null; 
   isProcessing = false;
@@ -30,4 +30,6 @@ export class IntegrationBatchFetchUsersfromPowerbiComponent {
       },
     });
 }
+=======
+>>>>>>> parent of cfd6709 (admin login created)
 }

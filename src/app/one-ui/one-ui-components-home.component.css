@@ -79,9 +79,8 @@ body {
 /* Main Content Styles */
 .main-content {
     margin-left: 270px;
-    /* padding: 10px; */
+    padding: 20px;
     transition: margin-left 0.3s ease;
-    margin-top: -50px;
 }
 
 .header {

@@ -1,4 +1,11 @@
 <div class="main-content">
+    <div class="header" style="background-color: #f0f0f0;">
+        <input type="text" placeholder="Search..." style="background-color: #fff; color: #333; border: 1px solid #ccc;">
+        <div class="icons">
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </div>
     <div class="cards" *ngIf="dashboardstatusCount">
         <div class="card">           
             <div class="text">
@@ -50,11 +57,11 @@
             </div>
         </div> 
      </div> 
-<br>
+
     <div class="table-container-fluid table-responsive striped">
         <table>
             <thead>
-                <tr class="bg-dark">
+                <tr>
                     <th>Action at</th>
                     <th>Action by</th>
                     <th>MPWZ ID</th>
