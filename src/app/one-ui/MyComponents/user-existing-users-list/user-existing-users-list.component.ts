@@ -1,20 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { OneApiServicesService } from '../../MyApiServices/one-api-services.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-user-existing-users-list',
   templateUrl: './user-existing-users-list.component.html',
   styleUrls: ['./user-existing-users-list.component.css']
 })
-export class UserExistingUsersListComponent implements OnInit {
-  users: any[] = []; 
-  result: any;
-  isProcessing: boolean = false; 
-  page_no: number = 1; 
-  page_size: number = 100; 
-  total_counts: number = 0; 
-  total_pages: number = 0; 
+export class UserExistingUsersListComponent {
 
+<<<<<<< HEAD
   constructor(private oneapisevices: OneApiServicesService) {}
 
   ngOnInit(): void {
@@ -57,3 +50,6 @@ export class UserExistingUsersListComponent implements OnInit {
     }
   }
 }
+=======
+}
+>>>>>>> parent of 9f6fb90 (ok comitt)

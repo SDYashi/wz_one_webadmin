@@ -61,21 +61,12 @@ export class OneApiServicesService {
   viewuserprofile_db(): Observable<any> {
     return this.http.get(this.baseUrl+'/android/userprofile',{});
   }
-  
-  viewalluserprofile_db(page_no: number, page_size: number): Observable<any> {
-    return this.http.get(this.baseUrl+'/android/userlist?page_no='+page_no+'&page_size='+page_size,{});
-  }
 
   CreateintegrationAPIUser (userData: any): Observable<any> {
     return this.http.post(this.baseUrl+'/admin/shared-call/api/v1/create-integration-users',userData); 
   }
-  changePasswordbyadmin(data: { username: string; new_password: string }): Observable<any> {
-    return this.http.put(this.baseUrl+'/admin/change-password-byadminuser', data);
-  }
 
-  updateWorkLocationbyadmin(data: { username: string; work_location_code: string }): Observable<any> {
-    return this.http.put(this.baseUrl+'/admin/update-work-location-foremployee', data);
-  }
+
 
   createUserinfor_foremail (user: any): Observable<any> {
     return this.http.post<any>(this.baseUrl+'/admin/add-admin-details', user);
