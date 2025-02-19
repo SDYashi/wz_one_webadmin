@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OneApiServicesService } from '../../MyApiServices/one-api-services.service';
 
 @Component({
   selector: 'app-integration-batch-create-android-users',
@@ -6,8 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./integration-batch-create-android-users.component.css']
 })
 export class IntegrationBatchCreateAndroidUsersComponent {
+  isProcessing: boolean=false;
+  result: any;
 
-<<<<<<< HEAD
+    constructor(private oneapiservices : OneApiServicesService) {}
+
   insert_userfrom_mpwzuser_oneapp() {    
     this.isProcessing = true;
     this.oneapiservices.insertUserfrom_mmpwzuser().subscribe({
@@ -21,6 +25,4 @@ export class IntegrationBatchCreateAndroidUsersComponent {
       },
     });
 }
-=======
->>>>>>> parent of cfd6709 (admin login created)
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OneApiServicesService } from '../../MyApiServices/one-api-services.service';
 
 @Component({
   selector: 'app-integrated-add-new-notify-status',
@@ -6,8 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./integrated-add-new-notify-status.component.css']
 })
 export class IntegratedAddNewNotifyStatusComponent {
+  button_name: any;
+  module_name: any;
+  response_status: any;
 
-<<<<<<< HEAD
   constructor(private oneapiservices : OneApiServicesService) {}
 
   submitForm() {
@@ -25,6 +28,4 @@ export class IntegratedAddNewNotifyStatusComponent {
       },
     } );
   }
-=======
->>>>>>> parent of cfd6709 (admin login created)
 }

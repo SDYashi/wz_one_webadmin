@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OneApiServicesService } from '../../MyApiServices/one-api-services.service';
 
 @Component({
   selector: 'app-integrated-add-new-app',

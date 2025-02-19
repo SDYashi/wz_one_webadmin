@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { OneApiServicesService } from '../../MyApiServices/one-api-services.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-user-view-profile',
@@ -7,7 +9,6 @@ import { Component } from '@angular/core';
 })
 export class UserViewProfileComponent {
 
-<<<<<<< HEAD
   user: any = {};
 
   constructor(private http: HttpClient, private oneapisevices:OneApiServicesService) {}
@@ -28,6 +29,4 @@ export class UserViewProfileComponent {
     }
   });
   }
-=======
->>>>>>> parent of cfd6709 (admin login created)
 }

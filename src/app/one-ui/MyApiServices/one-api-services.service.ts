@@ -38,13 +38,30 @@ export class OneApiServicesService {
     return this.http.get<any[]>(this.baseUrl+'/android/dashboard-recent-actiondone-history').pipe(
       map(response => response));
   }
-   
-  
-
 
   createUserinfor_foremail (user: any): Observable<any> {
     return this.http.post<any>(this.baseUrl+'/admin/add-admin-details', user);
+  }  
+  
+  insertUserfrom_mmpwzuser(): Observable<any> {
+    return this.http.get<any>(this.baseUrl+'/admin/add-admin-details');
   }
+  insertUserfrom_powerbiwarehouse(): Observable<any> {
+    return this.http.get<any>(this.baseUrl+'/admin/add-admin-details');
+  }
+  submitAddAppName(user: any): Observable<any> {
+    return this.http.post<any>(this.baseUrl+'/admin/add-admin-details', user);
+  }
+  submitNotificationStatus(user: any): Observable<any> {
+    return this.http.post<any>(this.baseUrl+'/admin/add-admin-details', user);
+  }
+  viewalluserprofile_db(page_no: any, page_size: any) {
+    return this.http.get<any>(this.baseUrl+'/android/view-all-user-profiles/'+page_no+'/'+page_size);
+  }
+  viewuserprofile_db() {
+    return this.http.get<any>(this.baseUrl+'/android/view-user-profile');
+  }
+  
 
 
 }

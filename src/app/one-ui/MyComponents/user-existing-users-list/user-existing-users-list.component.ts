@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OneApiServicesService } from '../../MyApiServices/one-api-services.service';
 
 @Component({
   selector: 'app-user-existing-users-list',
@@ -6,8 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-existing-users-list.component.css']
 })
 export class UserExistingUsersListComponent {
+  isProcessing: boolean=false;
+  users: any;
+  total_counts: any;
+  total_pages: number = 0;
+  result: any = null;
+  page_no: number = 1;
+  page_size: number = 10;
 
-<<<<<<< HEAD
   constructor(private oneapisevices: OneApiServicesService) {}
 
   ngOnInit(): void {
@@ -50,6 +57,3 @@ export class UserExistingUsersListComponent {
     }
   }
 }
-=======
-}
->>>>>>> parent of 9f6fb90 (ok comitt)
