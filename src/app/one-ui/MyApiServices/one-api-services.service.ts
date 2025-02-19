@@ -61,6 +61,10 @@ export class OneApiServicesService {
   viewuserprofile_db() {
     return this.http.get<any>(this.baseUrl+'/android/view-user-profile');
   }
+  createUser(user: any): Observable<any> {
+    return this.http.post<any>(this.baseUrl+'/admin/add-admin-details', user);
+  }
+  
   
 
 

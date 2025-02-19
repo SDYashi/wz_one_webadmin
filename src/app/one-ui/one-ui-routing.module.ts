@@ -23,7 +23,7 @@ const routes: Routes = [
   {
     path:'oneadmin',
     component:OneUiComponentsHomeComponent, 
-    canActivate: [AuthGaurdGuard],
+    // canActivate: [AuthGaurdGuard],
     children: [
       { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
       { path:'dashboard', component:OneDashboardComponent},

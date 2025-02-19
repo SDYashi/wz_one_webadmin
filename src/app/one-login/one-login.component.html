@@ -16,8 +16,9 @@
             <br><br>
             <button type="submit">Login</button>
         </form>
+        <br>
+        <div *ngIf="respose_msg" class="response-msg">
+            {{respose_msg| json}}
+        </div>
     </div>
-</div>
-<div *ngIf="respose_msg">
-    {{respose_msg| json}}
 </div>

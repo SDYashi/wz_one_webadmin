@@ -28,6 +28,7 @@ import { AuthOneInterceptorInterceptor } from './MyInterceptor/auth-one-intercep
 import { AlertModelsComponent } from './MySharedModels/alert-models/alert-models.component';
 import { ConfirmationModelsComponent } from './MySharedModels/confirmation-models/confirmation-models.component';
 import { UserInputModelsComponent } from './MySharedModels/user-input-models/user-input-models.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -61,6 +62,7 @@ import { UserInputModelsComponent } from './MySharedModels/user-input-models/use
     CommonModule,
     OneUiRoutingModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [
     {
