@@ -29,11 +29,11 @@ export class UserExistingUsersListComponent {
         this.total_counts = response.total_count; 
         this.total_pages = Math.ceil(this.total_counts / this.page_size); 
         this.result = response.msg;
-        this.isProcessing = false; // Set processing to false after loading
+        this.isProcessing = true;
       },
       error: (errors) => {
         this.result = errors.error.msg;
-        this.isProcessing = false; // Set processing to false on error
+        this.isProcessing = false;
       }
     });
   }
