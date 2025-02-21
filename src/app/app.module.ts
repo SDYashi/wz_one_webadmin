@@ -7,8 +7,6 @@ import { OneLoginComponent } from './one-login/one-login.component';
 import { OneUiModule } from './one-ui/one-ui.module';
 import { FormsModule } from '@angular/forms';
 import { OneDashboardComponent } from './one-dashboard/one-dashboard.component';
-import { OneSupersetModule } from './one-superset/one-superset.module';
-import { OneTagsConsVillageModule } from './one-tags-cons-village/one-tags-cons-village.module';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -21,8 +19,6 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     OneUiModule,
-    OneSupersetModule,
-    OneTagsConsVillageModule,
     FormsModule,
     RouterModule,
   ],

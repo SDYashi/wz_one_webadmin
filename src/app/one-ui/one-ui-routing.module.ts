@@ -11,8 +11,6 @@ import { IntegratedAddNewNotifyStatusComponent } from './MyComponents/integrated
 import { IntegrationBatchCreateAndroidUsersComponent } from './MyComponents/integration-batch-create-android-users/integration-batch-create-android-users.component';
 import { IntegrationBatchFetchUsersfromPowerbiComponent } from './MyComponents/integration-batch-fetch-usersfrom-powerbi/integration-batch-fetch-usersfrom-powerbi.component';
 import { MessageChatsComponent } from './MyComponents/message-chats/message-chats.component';
-import { CommmercialComponent } from '../one-superset/commmercial/commmercial.component';
-import { StoreComponent } from '../one-superset/store/store.component';
 
 const routes: Routes = [
   {
