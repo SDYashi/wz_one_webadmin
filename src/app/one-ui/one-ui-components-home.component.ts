@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class OneUiComponentsHomeComponent {
 
+  toggleSidebar() {
+    const sidebar = document.getElementById('accordionSidebar') as HTMLElement;
+    sidebar.classList.toggle('toggled');
+  }
 }

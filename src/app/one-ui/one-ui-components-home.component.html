@@ -1,55 +1,57 @@
-<button
-  id="sidebarToggle"
-  class="btn btn-dark"
-  type="button"
-  data-bs-toggle="collapse"
-  data-bs-target="#accordionSidebar"
-  aria-controls="accordionSidebar"
-  aria-expanded="false"
-  aria-label="Toggle navigation">
-  <i class="fas fa-bars"></i>
-</button>
+
 <div class="d-flex">
   <!-- Sidebar -->
-  <aside class="sidebar bg-dark text-white vh-100 d-none d-md-block">
+  <aside class="sidebar bg-dark text-white vh-100 d-none d-md-block" id="accordionSidebar">
     <div class="container py-3">
       <div class="text-center mb-3">
         <h4>OneAdmin</h4>
       </div>
-      <ul class="list-group list-group-flush" id="accordionSidebar">
+      <ul class="list-group list-group-flush">
         <li class="list-group-item bg-dark text-white">
           <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/dashboard">One Dashboard</a>  
         </li>
         <li class="list-group-item bg-dark text-white">
-          <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/message-chatbot">
-            ChatBot Console
+          <a href="#" class="text-white text-decoration-none" routerLink="/superset/commmercial">
+            commmercial
           </a>  
-        </li>  
-        <li class="list-group-item bg-dark text-white">
-          <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/batch-control-management">
-            DB Batch Console
-          </a>  
-        </li>  
+        </li>    
         <li class="list-group-item bg-dark" data-bs-toggle="collapse" data-bs-target="#Complaints" aria-expanded="false" aria-controls="User">
           <a class="sidebar-link text-white d-flex justify-content-between align-items-center">
-            Complaints Console
+            NGB MIS Reports
             <i class="fas fa-chevron-down"></i>
           </a>
         </li>
         <div id="Complaints" class="collapse list-group list-group-flush ps-3" data-bs-parent="#accordionSidebar">
           <li class="list-group-item bg-dark">
-            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-complaints-dashboard">Complaints Dashboard</a>
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-complaints-dashboard">Consumer's Passbook</a>
           </li>
           <li class="list-group-item bg-dark">
-            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-complaints-form-entry">Complaints Form</a>
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-complaints-form-entry">Consumer's Old Bills</a>
           </li>
           <li class="list-group-item bg-dark">
-            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-complaints-view">Complaints View</a>
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-complaints-view">Bill Ledgers</a>
+          </li>
+        </div>
+        <li class="list-group-item bg-dark" data-bs-toggle="collapse" data-bs-target="#VillageTaggingOneApp" aria-expanded="false" aria-controls="User">
+          <a class="sidebar-link text-white d-flex justify-content-between align-items-center">
+            Village's Tagging
+            <i class="fas fa-chevron-down"></i>
+          </a>
+        </li>
+        <div id="VillageTaggingOneApp" class="collapse list-group list-group-flush ps-3" data-bs-parent="#accordionSidebar">
+          <li class="list-group-item bg-dark">
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-complaints-form-entry">Add VillagesTagging</a>
+          </li>
+          <li class="list-group-item bg-dark">
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-complaints-view">View VillagesMapping</a>
+          </li>
+          <li class="list-group-item bg-dark">
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-complaints-dashboard">View VillagesList</a>
           </li>
         </div>
         <li class="list-group-item bg-dark" data-bs-toggle="collapse" data-bs-target="#User" aria-expanded="false" aria-controls="User">
           <a class="sidebar-link text-white d-flex justify-content-between align-items-center">
-            User Console
+            Users Console
             <i class="fas fa-chevron-down"></i>
           </a>
         </li>
@@ -64,7 +66,7 @@
             <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-change-work-location">Change Work Location</a>
           </li>
           <li class="list-group-item bg-dark">
-            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-add-users-for-alerts">Add Users for Alerts</a>
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/user-add-users-for-alerts">List of Existing Users</a>
           </li>
         </div>
         <li class="list-group-item bg-dark" data-bs-toggle="collapse" data-bs-target="#Integration" aria-expanded="false" aria-controls="Integration">
@@ -83,12 +85,34 @@
           <li class="list-group-item bg-dark">
             <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/integrated-add-new-app-buttons">Add New App buttons</a>
           </li>
+          <li class="list-group-item bg-dark text-white">
+            <a href="#" class="text-white text-decoration-none" routerLink="/oneadmin/batch-control-management">
+              DB Batch Control
+            </a>  
+          </li>
         </div>
       </ul>
     </div>
   </aside>
   <!-- Main Content -->
-  <div class="container-fluid flex-fill p-4 main-content">
+  <div class="container-fluid flex-fill p-2 main-content">
+    <button
+        id="sidebarToggle"
+        class="btn btn-dark d-md-none"
+        type="button"
+        (click)="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="header d-flex align-items-center" style="background-color: #dfe8f0;">
+        <input type="text" placeholder="Search..." style="background-color: #fff; color: #333; border: 1px solid #ccc; flex: 1;">
+        <div class="dropdown">
+            <i class="fas fa-user-circle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"></i>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 200px;">
+                <li><a class="dropdown-item" href="#">User's Profile</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+        </div>
+    </div>
     <router-outlet></router-outlet>
   </div>
 </div>

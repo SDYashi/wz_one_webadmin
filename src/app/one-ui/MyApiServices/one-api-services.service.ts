@@ -16,7 +16,7 @@ export class OneApiServicesService {
   }
   getActiveUsersCount(): Observable<number> {
     return this.http.get<{ total_users: number }>(this.baseUrl+'/android/dashboard-active-users-count').pipe(
-      map(response => response.total_users) // Extract total_users from the response
+      map(response => response.total_users) 
     );
   }
   getDashboardStatuswiseCountData(): Observable<any> {
@@ -25,7 +25,7 @@ export class OneApiServicesService {
     );
   }
   getStatusWiseNotifyCount(): Observable<any> {
-    return this.http.get<any>(this.baseUrl+'/android/dashboard-statuswise-notify-count').pipe(
+    return this.http.get<any>(this.baseUrl+'/android/admin-dashboard-statuswise-notify-count').pipe(
       map(response => response) 
     );
   }
@@ -37,32 +37,36 @@ export class OneApiServicesService {
   getRecentActionDoneHistory(): Observable<any[]> {
     return this.http.get<any[]>(this.baseUrl+'/android/dashboard-recent-actiondone-history').pipe(
       map(response => response));
-  }
-
-  createUserinfor_foremail (user: any): Observable<any> {
-    return this.http.post<any>(this.baseUrl+'/admin/add-admin-details', user);
   }  
-  
   insertUserfrom_mmpwzuser(): Observable<any> {
-    return this.http.get<any>(this.baseUrl+'/admin/add-admin-details');
+    return this.http.get<any>(this.baseUrl+'/admin/insert-userlogininfo-from-mpwzusers');
   }
   insertUserfrom_powerbiwarehouse(): Observable<any> {
-    return this.http.get<any>(this.baseUrl+'/admin/add-admin-details');
+    return this.http.get<any>(this.baseUrl+'/admin/insert-userinfo-from-powerbi-warehouse');
   }
-  submitAddAppName(user: any): Observable<any> {
-    return this.http.post<any>(this.baseUrl+'/admin/add-admin-details', user);
+  submitAddAppName(AppName: any): Observable<any> {
+    return this.http.post<any>(this.baseUrl+'/admin/notify-integrated-app', AppName);
   }
-  submitNotificationStatus(user: any): Observable<any> {
-    return this.http.post<any>(this.baseUrl+'/admin/add-admin-details', user);
+  submitNotificationStatus(notifystatus: any): Observable<any> {
+    return this.http.post<any>(this.baseUrl+'/admin/notify-status', notifystatus);
   }
-  viewalluserprofile_db(page_no: any, page_size: any) {
-    return this.http.get<any>(this.baseUrl+'/android/view-all-user-profiles/'+page_no+'/'+page_size);
+  submitButtonName(ButtonName: any): Observable<any> {
+    return this.http.post<any>(this.baseUrl+'/admin/add-button-status', ButtonName);
+  }  
+  ChangePasswordbyAdmin(ButtonName: any): Observable<any> {
+    return this.http.post<any>(this.baseUrl+'/admin/change-password-byadminuser', ButtonName);
   }
-  viewuserprofile_db() {
-    return this.http.get<any>(this.baseUrl+'/android/view-user-profile');
+  viewalluserprofile_list(page_no: any, page_size: any) {
+    return this.http.get<any>(this.baseUrl+'/android/userlist/'+page_no+'/'+page_size);
   }
-  createUser(user: any): Observable<any> {
-    return this.http.post<any>(this.baseUrl+'/admin/add-admin-details', user);
+  viewuserprofile() {
+    return this.http.get<any>(this.baseUrl+'/android/userprofile');
+  }
+  createIntegrationUsers(user: any): Observable<any> {
+    return this.http.post<any>(this.baseUrl+'/admin/shared-call/api/v1/create-integration-users', user);
+  }  
+  updateworklocation(user: any): Observable<any> {
+    return this.http.post<any>(this.baseUrl+'/admin/update-work-location-foremployee', user);
   }
   
   

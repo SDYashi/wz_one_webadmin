@@ -23,7 +23,7 @@ export class UserExistingUsersListComponent {
 
   loadUser (): void {
     this.isProcessing = true; // Set processing to true before loading
-    this.oneapisevices.viewalluserprofile_db(this.page_no, this.page_size).subscribe({
+    this.oneapisevices.viewalluserprofile_list(this.page_no, this.page_size).subscribe({
       next: (response) => {
         this.users = response.users;
         this.total_counts = response.total_count; 

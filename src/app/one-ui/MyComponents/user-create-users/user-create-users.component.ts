@@ -14,7 +14,7 @@ export class UserCreateUsersComponent {
   constructor(private oneapiservices:OneApiServicesService) { }
   onSubmit() {
     this.isProcessing = true;
-    this.oneapiservices.createUser(this.user).subscribe({
+    this.oneapiservices.createIntegrationUsers(this.user).subscribe({
       next: (response) => {
         this.result = response.msg;
         this.isProcessing = false;

@@ -116,6 +116,40 @@ body {
     transform: scale(1.2);
     color: #007bff;
 }
+/* Hover Effects */
+.sidebar ul li:hover {
+    background-color: #1e2937;
+    padding-left: 25px; /* Indentation on hover */
+}
+
+.header .icons i:hover {
+    transform: scale(1.3);
+    color: #ff5722;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #2a3f54;
+  }
+  
+  .sidebar h4 {
+    font-size: 1.5rem;
+  }
+
+  /* Collapsed Sidebar */
+.sidebar.collapsed {
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s ease;
+  }
+  
+  /* Expanded Main Content */
+  .main-content.expanded {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+    margin-top: 20px;
+  }
+  
 
 /* Responsive Styles */
 @media (max-width: 991px) {
@@ -162,8 +196,8 @@ body {
         margin-left: 60px;
     }
 
-    .header input {
-        width: 150px;
+    .main-content .header input {
+        width: 50px;
     }
 }
 
@@ -173,9 +207,8 @@ body {
         align-items: flex-start;
     }
 
-    .header input {
-        width: 100%;
-        margin-bottom: 10px;
+    .main-content .header input {
+        width: 50px;
     }
 
     .header .icons {
@@ -188,25 +221,7 @@ body {
     }
 }
 
-/* Hover Effects */
-.sidebar ul li:hover {
-    background-color: #1e2937;
-    padding-left: 25px; /* Indentation on hover */
-}
 
-.header .icons i:hover {
-    transform: scale(1.3);
-    color: #ff5722;
-}
-
-/* Sidebar */
-.sidebar {
-    background-color: #2a3f54;
-  }
-  
-  .sidebar h4 {
-    font-size: 1.5rem;
-  }
   
   @media (max-width: 768px) {
     .sidebar {
@@ -220,30 +235,8 @@ body {
     .sidebar ul.active {
       display: block;
     }
-  }
-  
-  /* Main Content */
-  .main-content {
-    margin-left: 270px;
-  }
-  
-  @media (max-width: 768px) {
-    .main-content {
-      margin-left: 0;
+    .main-content .header input {
+        width: 50px;
     }
   }
-
-  /* Collapsed Sidebar */
-.sidebar.collapsed {
-    width: 0;
-    overflow: hidden;
-    transition: width 0.3s ease;
-  }
-  
-  /* Expanded Main Content */
-  .main-content.expanded {
-    margin-left: 0;
-    transition: margin-left 0.3s ease;
-  }
-  
   

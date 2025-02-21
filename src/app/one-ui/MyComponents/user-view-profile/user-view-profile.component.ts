@@ -18,7 +18,7 @@ export class UserViewProfileComponent {
   }
 
   loadUser(): void {
-  this.oneapisevices.viewuserprofile_db().subscribe({
+  this.oneapisevices.viewuserprofile().subscribe({
     next: (response) => {
       this.user = response.msg;
     },

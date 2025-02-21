@@ -1,11 +1,4 @@
 <div class="main-content">
-    <div class="header" style="background-color: #f0f0f0;">
-        <input type="text" placeholder="Search..." style="background-color: #fff; color: #333; border: 1px solid #ccc;">
-        <div class="icons">
-            <i class="fas fa-bell"></i>
-            <i class="fas fa-user-circle"></i>
-        </div>
-    </div>
     <div class="cards" *ngIf="dashboardstatusCount">
         <div class="card">           
             <div class="text">
@@ -85,59 +78,5 @@
         </table>
     </div>
     <br>
-    <div class="container-fluid" style=" padding: 10px; border: 1px solid #ccc;">
-        <div class="box">
-            <h6 class="text-center" style="color:white; background-color: #6d6ff3; padding: 10px;">Dashboard Source Status Wise</h6>
-            <div *ngIf="dashboardstatuswiseData">
-                <table>
-                    <tr>
-                        <td>
-                            <h5>ERP</h5>
-                            <p>APPROVED: {{ dashboardstatuswiseData?.erp?.APPROVED ? dashboardstatuswiseData.erp.APPROVED : 0 }}</p>
-                            <p>PENDING: {{ dashboardstatuswiseData?.erp?.PENDING ? dashboardstatuswiseData.erp.PENDING : 0 }}</p>
-                            <p>REASSIGNED: {{ dashboardstatuswiseData?.erp?.REASSIGNED ? dashboardstatuswiseData.erp.REASSIGNED : 0 }}</p>
-                            <p>REJECTED: {{ dashboardstatuswiseData?.erp?.REJECTED ? dashboardstatuswiseData.erp.REJECTED : 0 }}</p>
 
-                        </td>
-                        <td>
-                            <h5>NGB</h5>
-                            <p>APPROVED: {{ dashboardstatuswiseData?.ngb?.APPROVED ? dashboardstatuswiseData.ngb.APPROVED : 0 }}</p>
-                            <p>PENDING: {{ dashboardstatuswiseData?.ngb?.PENDING ? dashboardstatuswiseData.ngb.PENDING : 0 }}</p>
-                            <p>REASSIGNED: {{ dashboardstatuswiseData?.ngb?.REASSIGNED ? dashboardstatuswiseData.ngb.REASSIGNED : 0 }}</p>
-                            <p>REJECTED: {{ dashboardstatuswiseData?.ngb?.REJECTED ? dashboardstatuswiseData.ngb.REJECTED : 0 }}</p>
-                        </td>
-                        <td>
-                            <h5>NGB</h5>
-                            <p>APPROVED: {{ dashboardstatuswiseData?.ngb?.APPROVED ? dashboardstatuswiseData.ngb.APPROVED : 0 }}</p>
-                            <p>PENDING: {{ dashboardstatuswiseData?.ngb?.PENDING ? dashboardstatuswiseData.ngb.PENDING : 0 }}</p>
-                            <p>REASSIGNED: {{ dashboardstatuswiseData?.ngb?.REASSIGNED ? dashboardstatuswiseData.ngb.REASSIGNED : 0 }}</p>
-                            <p>REJECTED: {{ dashboardstatuswiseData?.ngb?.REJECTED ? dashboardstatuswiseData.ngb.REJECTED : 0 }}</p>
-                        </td>
-                        <td>
-                            <h5>NGB</h5>
-                            <p>APPROVED: {{ dashboardstatuswiseData?.ngb?.APPROVED ? dashboardstatuswiseData.ngb.APPROVED : 0 }}</p>
-                            <p>PENDING: {{ dashboardstatuswiseData?.ngb?.PENDING ? dashboardstatuswiseData.ngb.PENDING : 0 }}</p>
-                            <p>REASSIGNED: {{ dashboardstatuswiseData?.ngb?.REASSIGNED ? dashboardstatuswiseData.ngb.REASSIGNED : 0 }}</p>
-                            <p>REJECTED: {{ dashboardstatuswiseData?.ngb?.REJECTED ? dashboardstatuswiseData.ngb.REJECTED : 0 }}</p>
-                        </td>
-                        <td>
-                            <h5>NGB</h5>
-                            <p>APPROVED: {{ dashboardstatuswiseData?.ngb?.APPROVED ? dashboardstatuswiseData.ngb.APPROVED : 0 }}</p>
-                            <p>PENDING: {{ dashboardstatuswiseData?.ngb?.PENDING ? dashboardstatuswiseData.ngb.PENDING : 0 }}</p>
-                            <p>REASSIGNED: {{ dashboardstatuswiseData?.ngb?.REASSIGNED ? dashboardstatuswiseData.ngb.REASSIGNED : 0 }}</p>
-                            <p>REJECTED: {{ dashboardstatuswiseData?.ngb?.REJECTED ? dashboardstatuswiseData.ngb.REJECTED : 0 }}</p>
-                        </td>
-                        <td>
-                            <h5>NGB</h5>
-                            <p>APPROVED: {{ dashboardstatuswiseData?.ngb?.APPROVED ? dashboardstatuswiseData.ngb.APPROVED : 0 }}</p>
-                            <p>PENDING: {{ dashboardstatuswiseData?.ngb?.PENDING ? dashboardstatuswiseData.ngb.PENDING : 0 }}</p>
-                            <p>REASSIGNED: {{ dashboardstatuswiseData?.ngb?.REASSIGNED ? dashboardstatuswiseData.ngb.REASSIGNED : 0 }}</p>
-                            <p>REJECTED: {{ dashboardstatuswiseData?.ngb?.REJECTED ? dashboardstatuswiseData.ngb.REJECTED : 0 }}</p>
-                        </td>
-                    </tr>
-                </table>
-              </div>
-              <p *ngIf="!dashboardstatuswiseData">Loading...</p>
-        </div>
-    </div>
   </div>
