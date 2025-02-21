@@ -17,7 +17,8 @@ respose_msg:any;
       next: (response) => {
         this.respose_msg = response.msg;
         localStorage.setItem('access_token', response.access_token);
-        this.router.navigate(['oneadmin/dashboard']);
+        // this.router.navigate(['oneadmin/dashboard']);
+        this.router.navigate(['one-control-dashboard']);
       },
       error: (error) => {
         this.respose_msg = error.error.msg;

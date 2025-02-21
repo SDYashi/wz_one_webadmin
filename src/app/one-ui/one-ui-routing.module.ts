@@ -33,12 +33,6 @@ const routes: Routes = [
       { path:'message-chatbot', component:MessageChatsComponent},
       { path:'message-input', component:MessageChatsComponent},
       { path:'message-msg-list', component:MessageChatsComponent},
-      { path: 'superset', children: [
-          { path: '', redirectTo: '/commmercial', pathMatch: 'full' },
-          { path: 'commmercial', component: CommmercialComponent },
-          { path: 'store', component: StoreComponent }
-      ]},
-
     ]
   },
 
