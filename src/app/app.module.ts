@@ -8,6 +8,7 @@ import { OneUiModule } from './one-ui/one-ui.module';
 import { FormsModule } from '@angular/forms';
 import { OneDashboardComponent } from './one-dashboard/one-dashboard.component';
 import { RouterModule } from '@angular/router';
+import { VillMapperModule } from './vill-mapper/vill-mapper.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     OneUiModule,
+    VillMapperModule,
     FormsModule,
     RouterModule,
   ],

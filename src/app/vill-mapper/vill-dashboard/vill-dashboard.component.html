@@ -1,0 +1,142 @@
+<div class="container mt-4">
+    <div class="row mt-4">
+      <div class="col">
+        <div class="card text-center" style="background-color: rgb(219, 143, 30) ; color: white; padding: 10px;">
+          <div class="card-body">
+            <h6>Parliament</h6>
+            <h2>{{ divParliamentCount }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center" style="background-color: rgb(7, 124, 22) ; color: white; padding: 10px;">
+          <div class="card-body">
+            <h6>Assembly</h6>
+            <h2>{{ assemblyCount }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center" style="background-color: rgb(5, 99, 86) ; color: white; padding: 10px;">
+          <div class="card-body">
+            <h6>District</h6>
+            <h2>{{ districtCount }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center" style="background-color: rgb(6, 77, 87) ; color: white; padding: 10px;">
+          <div class="card-body">
+            <h6>Sub-Districts</h6>
+            <h2>{{ subdistrictCount }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center" style="background-color: rgb(44, 6, 133) ; color: white; padding: 10px;">
+          <div class="card-body">
+            <h6>Local Bodies</h6>
+            <h2>{{ localBodyCount }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center" style="background-color: rgb(97, 48, 89) ; color: white; padding: 10px;">
+          <div class="card-body">
+            <h6>Villages</h6>
+            <h2>{{ villageCount }}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="row mt-4">
+      <div class="col">
+        <div class="card text-center" style="background-color: rgb(38, 73, 73) ; color: white; padding: 10px;">
+          <div class="card-body">
+            <h6>Total Consumers</h6>
+            <h2>{{ totalConsumersCount }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center" style="background-color: rgb(96, 114, 68) ; color: white; padding: 10px;">
+          <div class="card-body">
+            <h6>Tagging Percentage</h6>
+            <h2>{{ taggingPercentage }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center" style="background-color: rgb(129, 69, 69) ; color: white; padding: 10px;">
+          <div class="card-body">
+            <h6>Untagged Consumers</h6>
+            <h2>{{ untaggedConsumersCount }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center" style="background-color: rgb(202, 175, 169) ; color: white; padding: 10px;">
+          <div class="card-body">
+            <h6>Village Mapping</h6>
+            <h2>{{ villMappingChangesCount }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center" style="background-color: rgb(186, 207, 207) ; color: white; padding: 10px;">
+          <div class="card-body">
+            <h6>Village Count</h6>
+            <h2>{{ untaggedvillageCount }}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<br>
+<hr>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h5 style="background-color: rgb(179, 178, 147) ; color: white; padding: 10px;">Recent Changes</h5>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let change of recentChanges">
+            <td>{{ change.date }}</td>
+            <td>{{ change.description }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+      <h5 style="background-color: rgb(179, 178, 147) ; color: white; padding: 10px;">Recent User's Activities</h5>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Activity</th>
+            <th>Timestamp</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of userActivity">
+            <td>{{ user.name }}</td>
+            <td>{{ user.activity }}</td>
+            <td>{{ user.timestamp }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

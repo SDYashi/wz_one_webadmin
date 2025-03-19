@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-one-ui-components-home',
-  templateUrl: './one-ui-components-home.component.html',
-  styleUrls: ['./one-ui-components-home.component.css']
+  selector: 'app-vill-com-loader',
+  templateUrl: './vill-com-loader.component.html',
+  styleUrls: ['./vill-com-loader.component.css']
 })
-export class OneUiComponentsHomeComponent {
+export class VillComLoaderComponent {
+
+  isSidebarOpen: boolean = true; 
   toggleSidebar() {
-    const sidebar = document.getElementById('accordionSidebar') as HTMLElement;
-    sidebar.classList.toggle('toggled');
+    this.isSidebarOpen = !this.isSidebarOpen;
   }
 
   public username: string = '';
@@ -35,3 +36,4 @@ export class OneUiComponentsHomeComponent {
     }, 1000);
   }
 }
+

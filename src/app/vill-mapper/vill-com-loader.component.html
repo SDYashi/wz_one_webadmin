@@ -1,0 +1,182 @@
+<!-- 
+<div class="d-flex">
+    <aside class="sidebar bg-dark text-white vh-100 d-none d-md-block" id="accordionSidebar">
+      <div class="container">
+        <div class="text-center mb-3">
+          <h4>Village Tagging</h4>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item bg-dark">
+            <a href="#" class="text-white text-decoration-none" routerLink="/vill-tagging/vill-dashboard">Dashboard</a>  
+          </li>
+          <li class="list-group-item bg-dark" data-bs-toggle="collapse" data-bs-target="#VillageTaggingOneApp" aria-expanded="false" aria-controls="User">
+            <a class="sidebar-link text-white d-flex justify-content-between align-items-center">
+              Tagging Console
+              <i class="fas fa-chevron-down"></i>
+            </a>
+          </li>
+          <div id="VillageTaggingOneApp" class="collapse list-group list-group-flush ps-3" data-bs-parent="#accordionSidebar">
+            <li class="list-group-item bg-dark">
+              <a href="#" class="text-white text-decoration-none" routerLink="/vill-tagging/vill-mapping">Add Villages Mapping</a>
+            </li>
+            <li class="list-group-item bg-dark">
+              <a href="#" class="text-white text-decoration-none" routerLink="/vill-tagging/vill-edit-mapping">Edit Villages Mapping</a>
+            </li>
+            <li class="list-group-item bg-dark">
+              <a href="#" class="text-white text-decoration-none" routerLink="/vill-tagging/vill-view-mapping">View Villages Mapping</a>
+            </li>
+          </div>
+          <li class="list-group-item bg-dark" data-bs-toggle="collapse" data-bs-target="#ReportsConsole" aria-expanded="false" aria-controls="User">
+            <a class="sidebar-link text-white d-flex justify-content-between align-items-center">
+             Reports Console
+              <i class="fas fa-chevron-down"></i>
+            </a>
+          </li>
+          <div id="ReportsConsole" class="collapse list-group list-group-flush ps-3" data-bs-parent="#accordionSidebar">
+            <li class="list-group-item bg-dark">
+              <a href="#" class="text-white text-decoration-none" routerLink="/vill-tagging/user-create-integration-users">Create Integration Users</a>
+            </li>
+            <li class="list-group-item bg-dark">
+              <a href="#" class="text-white text-decoration-none" routerLink="/vill-tagging/user-change-password">Change Password</a>
+            </li>
+            <li class="list-group-item bg-dark">
+              <a href="#" class="text-white text-decoration-none" routerLink="/vill-tagging/user-change-work-location">Change Work Location</a>
+            </li>
+            <li class="list-group-item bg-dark">
+              <a href="#" class="text-white text-decoration-none" routerLink="/vill-tagging/user-add-users-for-alerts">List of Existing Users</a>
+            </li>
+          </div>
+          <li class="list-group-item bg-dark" data-bs-toggle="collapse" data-bs-target="#AdminConsole" aria-expanded="false" aria-controls="User">
+            <a class="sidebar-link text-white d-flex justify-content-between align-items-center">
+             Admin Console
+              <i class="fas fa-chevron-down"></i>
+            </a>
+          </li>
+          <div id="AdminConsole" class="collapse list-group list-group-flush ps-3" data-bs-parent="#accordionSidebar">
+            <li class="list-group-item bg-dark">
+              <a href="#" class="text-white text-decoration-none" routerLink="/vill-tagging/user-create-integration-users">Create Integration Users</a>
+            </li>
+            <li class="list-group-item bg-dark">
+              <a href="#" class="text-white text-decoration-none" routerLink="/vill-tagging/user-change-password">Change Password</a>
+            </li>
+            <li class="list-group-item bg-dark">
+              <a href="#" class="text-white text-decoration-none" routerLink="/vill-tagging/user-change-work-location">Change Work Location</a>
+            </li>
+            <li class="list-group-item bg-dark">
+              <a href="#" class="text-white text-decoration-none" routerLink="/vill-tagging/user-add-users-for-alerts">List of Existing Users</a>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </aside>
+    <div class="container-fluid flex-fill p-2 main-content">
+      <button
+          id="sidebarToggle"
+          class="btn btn-dark d-md-none"
+          type="button"
+          (click)="toggleSidebar()">
+          <i class="fas fa-bars"></i>
+      </button>
+      <div class="header d-flex align-items-center ml-0" style="background-color: #243747;">
+          <a class="btn btn-danger" routerLink="/one-control-dashboard">Go Back to Main Dashboard</a>
+          <div class="dropdown d-flex align-items-center justify-content-end">
+            <span class="me-2 flex-grow-1 text-white">
+              User: {{ username }}
+            </span>
+            <span class="ms-2 me-auto text-white">
+              Session: {{ sessionTimer }}
+            </span>
+            <i class="fas fa-user-circle text-white ms-2 p-2" style="font-size: 2rem;" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"></i>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="width: 200px; margin-top: 55px;">
+              <li><a class="dropdown-item" href="#">User's Profile</a></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </div>      
+      </div>
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+   -->
+   <div class="d-flex">
+<!-- Sidebar -->
+<aside  class="sidebar bg-dark text-white vh-100 d-md-block"  id="accordionSidebar" 
+  [ngClass]="{'d-none': !isSidebarOpen, 'd-block': isSidebarOpen}">
+  <div class="container-fluid">
+    <div class="text-center mb-3">
+      <h4>Village Tagging</h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item bg-dark">
+        <a href="#" class="text-white text-decoration-none" routerLink="/"></a>  
+      </li>
+      <li class="list-group-item bg-dark">
+        <a href="#" class="text-white text-decoration-none" routerLink="/vill-tagging/vill-dashboard">Dashboard</a>  
+      </li>
+      <li class="list-group-item bg-dark" data-bs-toggle="collapse" data-bs-target="#VillageTaggingOneApp" aria-expanded="false">
+        <a class="sidebar-link text-white d-flex justify-content-between align-items-center">
+          Tagging Console
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </li>
+      <div id="VillageTaggingOneApp" class="collapse list-group list-group-flush ps-3">
+        <li class="list-group-item bg-dark">
+          <a href="#" class="text-white text-decoration-none" routerLink="/vill-tagging/vill-mapping">Add Villages Mapping</a>
+        </li>
+        <li class="list-group-item bg-dark">
+          <a href="#" class="text-white text-decoration-none" routerLink="/vill-tagging/vill-edit-mapping">Edit Villages Mapping</a>
+        </li>
+        <li class="list-group-item bg-dark">
+          <a href="#" class="text-white text-decoration-none" routerLink="/vill-tagging/vill-view-mapping">View Villages Mapping</a>
+        </li>
+      </div>
+      <li class="list-group-item bg-dark" data-bs-toggle="collapse" data-bs-target="#ReportsConsole" aria-expanded="false" aria-controls="User">
+        <a class="sidebar-link text-white d-flex justify-content-between align-items-center">
+         Reports Console
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </li>
+      <div id="ReportsConsole" class="collapse list-group list-group-flush ps-3" data-bs-parent="#accordionSidebar">
+        <li class="list-group-item bg-dark">
+          <a href="#" class="text-white text-decoration-none" routerLink="/vill-tagging/user-create-integration-users">Create Integration Users</a>
+        </li>      
+      </div>
+      <li class="list-group-item bg-dark" data-bs-toggle="collapse" data-bs-target="#AdminConsole" aria-expanded="false" aria-controls="User">
+        <a class="sidebar-link text-white d-flex justify-content-between align-items-center">
+         Admin Console
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </li>
+      <div id="AdminConsole" class="collapse list-group list-group-flush ps-3" data-bs-parent="#accordionSidebar">
+        <li class="list-group-item bg-dark">
+          <a href="#" class="text-white text-decoration-none" routerLink="/vill-tagging/user-create-integration-users">Create Integration Users</a>
+        </li>
+      </div>
+    </ul>
+  </div>
+</aside>
+<!-- Main Content -->        
+<div class="container-fluid flex-fill main-content" [ngClass]="{'expanded': isSidebarOpen, 'collapsed': !isSidebarOpen}" style="overflow-y: auto;">
+  <div  class="header d-flex align-items-center " style="background-color: #243747;">  
+    <div class="d-flex flex-grow-1">
+      <button
+          id="sidebarToggle"
+          class="btn btn-dark me-2"
+          type="button"
+          (click)="toggleSidebar()">
+          <i class="fas fa-bars"></i>
+      </button>
+      <a class="btn btn-danger me-2" routerLink="/one-control-dashboard">Go Back to Main Dashboard</a>
+    </div>
+    <div class="dropdown d-flex align-items-center justify-content-end">
+      <i class="fas fa-user-circle text-white ms-2 p-1" style="font-size: 2rem;" id="dropdownMenuButton" data-bs-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="width: 200px; margin-top: 55px;">
+        <li><a class="dropdown-item" href="#">User's Profile</a></li>
+        <li><a class="dropdown-item" href="#">Logout</a></li>
+      </ul>
+    </div>      
+  </div>
+  <div style="flex-grow: 1; overflow-y: auto;">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+</div>
