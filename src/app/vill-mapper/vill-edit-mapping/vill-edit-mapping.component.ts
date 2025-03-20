@@ -13,6 +13,7 @@ export class VillEditMappingComponent {
   consumers_tagging_submit: string = 'Submit';
   consumers_tagging_reset: string = 'Reset';
   processing_flag:boolean=false;
+  allDisabled = false;
   locations: any[] = [];
   groups: any[] = [];
   dairies: any[] = [];
@@ -416,6 +417,7 @@ export class VillEditMappingComponent {
         next: (response) => {
           this.consumers_search = 'Fetch Consumers';
           this.consumers_Change = response;
+        
           if (this.consumers_Change.length === 0) {
             alert('No consumers remain for village tagging.');
           }
@@ -432,40 +434,65 @@ export class VillEditMappingComponent {
   
   submitSelectedConsumers() {
     if (this.selectedConsumers.length > 0) {
-      this.consumers_tagging_submit='Pls wait...Consumers Tagging in Processing';
-      this.processing_flag=true;
-       this.payload = this.selectedConsumers.map(consumer_no => ({
+      this.consumers_tagging_submit = 'Pls wait...Consumers Tagging in Processing';
+      this.processing_flag = true;
+      this.payload = this.selectedConsumers.map(consumer_no => ({
         'loc_code': this.location_code,
         'group_no': this.group_no,
-        'dairy_no': this.dairy_no_Change,
-        'consumer_no':consumer_no,
+        'dairy_no': this.consumers.find(c => c.consumer_no === consumer_no)?.dairy_no || 0,
+        'consumer_no': consumer_no,
         'consumer_name': this.consumers.find(c => c.consumer_no === consumer_no)?.consumer_name,
-        'parliyament_name': this.parliament_name_Change, 
-        'assembly_name': this.assembly_name_Change, 
-        'district_name': this.district_name_Change, 
-        'subdistrict_name': this.subdistrict_name_Change || '',  
-        'localbody_name': this.localbody_name_Change,  
-        'village_name': this.village_name_Change,  
+        'old_village_name': this.village_name,
+        'old_village_code': this.localbody_name,
+        'parliyament_name': this.parliament_name_Change,
+        'assembly_name': this.assembly_name_Change,
+        'district_name': this.district_name_Change,
+        'subdistrict_name': this.subdistrict_name_Change || '',
+        'localbody_name': this.localbody_name_Change,
+        'village_name': this.village_name_Change,
         'village_code': 'village_code',
-        'is_vill_mapped': true, 
-        'created_by': 'NA', 
-        'created_on': new Date().toISOString(), 
-        'updated_by': 'NA',  
+        'is_vill_mapped': true,
+        'created_by': 'NA',
+        'created_on': new Date().toISOString(),
+        'updated_by': 'NA',
         'updated_on': new Date().toISOString()
       }));
 
-      this.villService.updateMappedConsumers(this.payload).subscribe({
+      this.villService.updateMappedConsumers({ consumers: this.payload }).subscribe({
         next: (response) => {
-          this.consumers_tagging_submit='Submit'
-          this.processing_flag=false;
-          alert('Total ' + response.inserted_ids.length+" out of "+this.consumers.length+" consumers updated successfully.");
-          this.selectedConsumers = [];
+          this.consumers_tagging_submit = 'Submit';
+          this.processing_flag = false;
+          alert('Total ' + response.updated_ids.length + " out of " + this.consumers.length + " consumers updated successfully.");
           this.payload = [];
-          this.consumers = [];  
+          this.locations = [];
+          this.groups = [];
+          this.dairies = [];
+          this.consumers = [];
+          this.parliaments = [];
+          this.parliaments_alldata = [];
+          this.assemblies = [];
+          this.districts = [];
+          this.localBodies = [];
+          this.subdistricts = [];
+          this.villages = [];
+          this.selectedConsumers = [];
+          this.locations_Change = [];
+          this.groups_Change = [];
+          this.dairies_Change = [];
+          this.consumers_Change = [];
+          this.parliaments_Change = [];
+          this.parliaments_alldata_Change = [];
+          this.assemblies_Change = [];
+          this.districts_Change = [];
+          this.localBodies_Change = [];
+          this.subdistricts_Change = [];
+          this.villages_Change = [];
+          this.selectedConsumers_Change = [];
+
         },
         error: (errors) => {
-          this.consumers_tagging_submit='Submit'
-          this.processing_flag=false;
+          this.consumers_tagging_submit = 'Submit';
+          this.processing_flag = false;
           alert('Server Failed... ' + errors.error);
         }
       });
