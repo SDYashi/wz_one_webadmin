@@ -1,7 +1,0 @@
-{
-    "/village_mapping": {
-        "target": "http://127.0.0.1:443",
-        "secure": false,
-        "changeOrigin": true
-    }
-}
